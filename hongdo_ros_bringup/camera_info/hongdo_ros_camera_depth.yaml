@@ -1,0 +1,20 @@
+image_width: 640
+image_height: 480
+camera_name: realsense_depth_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [472.677811, 0, 321.253302, 0, 474.45026, 233.193881, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.149017, 0.005122, 0.002906, 0.000462, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [434.666718, 0, 321.428959, 0, 0, 454.095825, 233.332878, 0, 0, 0, 1, 0]

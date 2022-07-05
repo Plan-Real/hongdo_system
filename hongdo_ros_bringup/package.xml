@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hongdo_ros_bringup</name>
+  <version>0.0.0</version>
+  <description>
+    The hongdo robot bringup
+  </description>
+  <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>usb_cam</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>nav_msgs</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <build_export_depend>usb_cam</build_export_depend>
+  <depend>hongdo_ros_description</depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>usb_cam</exec_depend>  
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rosserial_python</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+</package>
