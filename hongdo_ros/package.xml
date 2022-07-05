@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hongdo_ros</name>
+  <version>0.0.0</version>
+  <description>
+    The hongdo robot meta package
+  </description>
+  <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+ <export><metapackage/></export>
+</package>
