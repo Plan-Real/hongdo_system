@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   tf
   usb_cam
+  hongdo_ros_description
   message_generation
 )
 
@@ -106,7 +107,8 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- CATKIN_DEPENDS geometry_msgs nav_msgs rospy sensor_msgs std_msgs tf usb_cam
+ CATKIN_DEPENDS geometry_msgs nav_msgs rospy sensor_msgs std_msgs tf usb_cam hongdo_ros_description
+ 
 )
 
 ###########
@@ -160,7 +162,7 @@ catkin_package(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  nodes/omo_r1_motor_node.py
+  nodes/hongdo_ros_motor_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
