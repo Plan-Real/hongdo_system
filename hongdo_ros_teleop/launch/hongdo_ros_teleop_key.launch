@@ -1,0 +1,4 @@
+<launch>
+  <!-- keyboard teleoperation node for omo r1 robot -->
+  <node pkg="hongdo_ros_teleop" type="hongdo_ros_teleop_key" name="hongdo_ros_teleop_keyboard"  output="screen"/>
+</launch>
