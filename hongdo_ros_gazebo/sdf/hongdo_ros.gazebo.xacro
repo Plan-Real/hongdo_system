@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<robot name="omo_r1_sim" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find omo_r1_description)/urdf/omo_r1.urdf.xacro"/>
+<robot name="hongdo_ros_sim" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find hongdo_ros_description)/urdf/hongdo_ros.urdf.xacro"/>
   <xacro:arg name="laser_visual"  default="false"/>
   <xacro:arg name="camera_visual" default="false"/>
   <xacro:arg name="imu_visual"    default="false"/>
@@ -60,7 +60,7 @@
   </gazebo>
 
   <gazebo>
-    <plugin name="omo_r1_controller" filename="libgazebo_ros_diff_drive.so">
+    <plugin name="hongdo_ros_controller" filename="libgazebo_ros_diff_drive.so">
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>

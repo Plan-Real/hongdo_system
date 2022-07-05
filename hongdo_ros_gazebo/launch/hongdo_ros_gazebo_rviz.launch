@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_remote.launch"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hongdo_ros_gazebo)/rviz/hongdo_ros_gazebo_model.rviz"/>
+</launch>
+

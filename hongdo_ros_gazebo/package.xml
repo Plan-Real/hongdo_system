@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>hongdo_ros_gazeboo</name>
+  <name>hongdo_ros_gazebo</name>
   <version>0.0.0</version>
-  <description>The hongdo_ros_gazeboo package</description>
+  <description>The hongdo_ros_gazebo package</description>
   <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
   <license>TODO</license>
   <!--   <doc_depend>doxygen</doc_depend> -->

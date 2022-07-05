@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="omo_r1" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="hongdo_ros" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find hongdo_ros_description)/urdf/common_properties.xacro"/>
 
   <link name="base_footprint"/>
@@ -163,7 +163,7 @@
     <visual>
       <origin xyz="0 0 0.0" rpy="0.0 0 0.0"/>
       <geometry>
-        <mesh filename="package://hongdo_ros_description/meshes/sensors/omo_r1_lidar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hongdo_ros_description/meshes/sensors/hongdo_ros_lidar.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -171,7 +171,7 @@
     <collision>
       <origin xyz="0 0 0.0" rpy="0.0 0 0.0"/>
       <geometry>
-        <mesh filename="package://omo_r1_description/meshes/sensors/omo_r1_lidar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hongdo_ros_description/meshes/sensors/hongdo_ros_lidar.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
@@ -194,7 +194,7 @@
     <visual>
       <origin xyz="0 0 0.0" rpy="1.5758 0.0 1.5758"/>
       <geometry>
-        <mesh filename="package://omo_r1_description/meshes/sensors/omo_r1_camera.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hongdo_ros_description/meshes/sensors/hongdo_ros_camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -202,12 +202,12 @@
     <collision>
       <origin xyz="0 0 0.0" rpy="1.5758 0.0 1.5758"/>
       <geometry>
-        <mesh filename="package://omo_r1_description/meshes/sensors/omo_r1_camera.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hongdo_ros_description/meshes/sensors/hongdo_ros_camera.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link> -->
 
-  <joint name="camera_rgb_joint" type="fixed">
+  <!-- <joint name="camera_rgb_joint" type="fixed">
     <origin xyz="0.03 0.0 0.0" rpy="0 0 0"/>
     <parent link="camera_link"/>
     <child link="camera_rgb_frame"/>
@@ -219,5 +219,5 @@
     <parent link="camera_rgb_frame"/>
     <child link="camera_rgb_optical_frame"/>
   </joint>
-  <link name="camera_rgb_optical_frame"/>
+  <link name="camera_rgb_optical_frame"/> -->
 </robot>

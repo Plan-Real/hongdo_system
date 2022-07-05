@@ -88,7 +88,7 @@
     <!-- Load world -->
     <include>
       <pose>0.015148 -0.012339 0 0 0 0</pose>
-      <!--<uri>model://omoros_world</uri>-->
+      <!--<uri>model://hongdo_ros_world</uri>-->
       <!--<uri>model://test</uri>-->
       <uri>model://erica</uri>
     </include>
