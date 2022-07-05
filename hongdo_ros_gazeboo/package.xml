@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hongdo_ros_gazeboo</name>
+  <version>0.0.0</version>
+  <description>The hongdo_ros_gazeboo package</description>
+  <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
+  <license>TODO</license>
+  <!--   <doc_depend>doxygen</doc_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>nav_msgs</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>gazebo</exec_depend>
+  <export>
+    <gazebo_ros plugin_path="${prefix}/../../lib"/>
+    <gazebo_ros plugin_path="/home/jeonghan/hongdo_ws/devel/lib"/>
+    <gazebo_ros gazebo_plugin_path="${prefix}/../../lib"/>
+    <gazebo_ros gazebo_plugin_path="/home/jeonghan/hongdo_ws/devel/lib"/>
+    <gazebo_ros gazebo_media_path="${prefix}"/>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>
