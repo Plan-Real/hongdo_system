@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 # original source code -> https://github.com/omorobot/omoros
 # modified by Bishop Pearson
@@ -165,7 +165,7 @@ class PacketReadHandler:
       if self._ph.get_port_state() == True:
          whole_packet = self._ph.read_port()
          if whole_packet:
-            packet = whole_packet.split(",")
+            packet = whole_packet.split((",").encode())
             try:
                header = packet[0].split("#")[1]
                
@@ -215,7 +215,8 @@ class PortHandler():
       return self._ser.isOpen()
 
    def write_port(self, buffer):
-      self._ser.write(buffer + "\r\n")
+      # a = buffer + "\r\n"
+      self._ser.write((buffer + "\r\n").encode())
 
    def read_port(self):
       return self._rl.readline()
