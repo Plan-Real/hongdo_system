@@ -10,8 +10,8 @@
     <arg name="set_port" value="$(arg set_port_motor)"/>
   </include>
 
-  <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_lidar.launch">
-    <arg name="set_frame_id" value="$(arg set_lidar_frame_id)"/>
-    <arg name="set_port" value="$(arg set_port_lidar)"/>
-  </include>
+ <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
+    <param name="port"         type="string" value="$(arg set_port_lidar)"/>  
+    <param name="frame_id"     type="string" value="$(arg set_lidar_frame_id)"/>
+  </node>
 </launch>

@@ -4,7 +4,7 @@
 #include <cmath>
 #include <vector>
 #include <bits/stdc++.h>
-#include "cluster_counter/Fin.h"
+#include "hongdo_ros_obstacle/Fin.h"
 
 using namespace std;
 
@@ -125,7 +125,7 @@ double findSlopeY2(int sum, vector<int> numOfPoints, vector<double> sign_distX, 
 
 
 void cluster_callback(const sensor_msgs::LaserScan::ConstPtr& lsrscan_msg){
-  cluster_counter::Fin msg;
+  hongdo_ros_obstacle::Fin msg;
   int numOfClusters = 0;    //Number of Clusters Counter
   vector<int> numOfPoints;  //Number of Points for Each Cluster
   vector<long double> distPoints;   //Distace of points for each Cluster
@@ -421,10 +421,10 @@ If yes, they are treated as the same cluster and no. of points for both are adde
 
 int main(int argc, char** argv){
 
-  ros::init(argc, argv, "cluster_counter");
+  ros::init(argc, argv, "hongdo_ros_obstacle");
   ros::NodeHandle n;
 
-  pub = n.advertise<cluster_counter::Fin>("fin_data", 10);
+  pub = n.advertise<hongdo_ros_obstacle::Fin>("fin_data", 10);
   // Subscriber to the laser scan on /scan topic
   ros::Subscriber cluster_sub = n.subscribe("/scan",1,cluster_callback);
 
