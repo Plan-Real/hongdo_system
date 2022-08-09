@@ -1,1 +1,1 @@
-sudo apt install ros-noetic-rosserial ros-noetic-rosserial-arduino
+sudo apt install ros-noetic-rosserial ros-noetic-rosserial-arduino \ ros-noetic-hls-lfcd-lds-driver
