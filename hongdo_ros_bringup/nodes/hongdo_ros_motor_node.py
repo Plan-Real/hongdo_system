@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 
 # original source code -> https://github.com/omorobot/omoros
 # modified by Bishop Pearson

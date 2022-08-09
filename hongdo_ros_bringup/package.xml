@@ -16,6 +16,7 @@
   <depend>geometry_msgs</depend>
   <depend>tf</depend>
   <depend>usb_cam</depend>
+  <depend>hls_lfcd_lds_driver</depend>
   <depend>hongdo_ros_description</depend>
   <exec_depend>joint_state_publisher</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
