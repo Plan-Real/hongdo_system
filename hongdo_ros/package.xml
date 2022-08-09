@@ -14,6 +14,7 @@
   <exec_depend>hongdo_ros_navigation</exec_depend>
   <exec_depend>hongdo_ros_slam</exec_depend>
   <exec_depend>hongdo_ros_teleop</exec_depend>
+  <exec_depend>hongdo_ros_obstacle</exec_depend>
   <!-- <exec_depend>hongdo_ros_marker_tracker</exec_depend> -->
   <!-- The export tag contains other, unspecified, tags -->
  <export><metapackage/></export>
