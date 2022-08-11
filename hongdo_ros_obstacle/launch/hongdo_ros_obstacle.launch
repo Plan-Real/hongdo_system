@@ -1,6 +1,3 @@
 <launch>
-
-  <node name="hongdo_ros_obstacle" type="hongdo_ros_obstacle" pkg="hongdo_ros_obstacle" output="screen">
-  </node>
-
+  <node name="hongdo_ros_obstacle" type="hongdo_ros_obstacle" pkg="hongdo_ros_obstacle" output="screen"/>
 </launch>
