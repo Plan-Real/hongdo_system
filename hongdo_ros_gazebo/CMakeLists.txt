@@ -15,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   tf
 )
-find_package(gazebo REQUIRED)
+find_package(GAZEBO REQUIRED)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -107,7 +107,7 @@ find_package(gazebo REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  CATKIN_DEPENDS gazebo_ros geometry_msgs nav_msgs roscpp std_msgs tf
- DEPENDS gazebo
+ DEPENDS GAZEBO
 )
 
 ###########
