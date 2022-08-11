@@ -9,9 +9,19 @@
   <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_motor.launch">
     <arg name="set_port" value="$(arg set_port_motor)"/>
   </include>
+ 
+  <include file='$(find dynamixel_workbench_operators)/launch/hongdo_ros_joint_operator.launch'/>
+  <include file='$(find dynamixel_workbench_controllers)/launch/hongdo_ros_dynamixel_controllers.launch'/>
 
- <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
+  <!-- dynamixel -->
+
+  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
     <param name="port"         type="string" value="$(arg set_port_lidar)"/>  
     <param name="frame_id"     type="string" value="$(arg set_lidar_frame_id)"/>
   </node>
+
+  <!-- lidar -->
+  <include file='$(find hongdo_ros_obstacle)/launch/hongdo_ros_obstacle.launch'/>
+  
+   
 </launch>

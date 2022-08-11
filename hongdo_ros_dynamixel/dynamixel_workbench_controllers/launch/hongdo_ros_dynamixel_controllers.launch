@@ -1,7 +1,7 @@
 <launch>
-  <arg name="usb_port"                default="/dev/ttyACM0"/>
+  <arg name="usb_port"                default="/dev/ttyU2D2"/>
   <arg name="dxl_baud_rate"           default="57600"/>
-  <arg name="namespace"               default="dynamixel_workbench"/>
+  <arg name="namespace"               default="hongdo_ros_dynamixel_workbench"/>
 
   <arg name="use_moveit"              default="false"/>
   <arg name="use_joint_state"         default="true"/>
