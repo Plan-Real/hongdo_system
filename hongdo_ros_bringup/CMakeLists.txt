@@ -15,6 +15,8 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   usb_cam
   hongdo_ros_description
+  dynamixel_workbench_controllers
+  dynamixel_workbench_operators
   hls_lfcd_lds_driver
   message_generation
 )
@@ -108,8 +110,18 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- CATKIN_DEPENDS hls_lfcd_lds_driver geometry_msgs nav_msgs rospy sensor_msgs std_msgs tf usb_cam hongdo_ros_description
- 
+ CATKIN_DEPENDS hls_lfcd_lds_driver 
+                geometry_msgs 
+                nav_msgs 
+                rospy 
+                sensor_msgs 
+                std_msgs 
+                tf 
+                usb_cam 
+                hongdo_ros_description 
+                hongdo_ros_obstacle 
+                dynamixel_workbench_operators
+                dynamixel_workbench_controllers
 )
 
 ###########
