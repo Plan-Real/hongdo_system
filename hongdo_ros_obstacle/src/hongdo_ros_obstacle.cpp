@@ -135,7 +135,7 @@ void cluster_callback(const sensor_msgs::LaserScan::ConstPtr& lsrscan_msg){
 
 
 
-  int length_range = 720;   //Length of Ranges array from Laser Scan;
+  int length_range = 360;   //Length of Ranges array from Laser Scan;
   ROS_INFO("Length of Array = %d",length_range);
 
   bool prev_inf;            //To check if previous scan point value was infinity or not
@@ -152,7 +152,7 @@ void cluster_callback(const sensor_msgs::LaserScan::ConstPtr& lsrscan_msg){
   float distance;
  
   // To check for and store the first point before loop is started
-  if(isfinite(lsrscan_msg->ranges[0])){
+  if(isfinite(lsrscan_msg->ranges[90])){
     numOfClusters++;
     numOfPoints.push_back(1);
     prev_inf = false;
@@ -180,7 +180,7 @@ void cluster_callback(const sensor_msgs::LaserScan::ConstPtr& lsrscan_msg){
 
 
 //////// Loop to check each point and find where new clusters start
-  for(int i=1;i<length_range;i++){
+  for(int i=91;i<length_range-90;i++){
 
      //If the point is a Finite value only then coordinates and cluster check would be done
     if(isfinite(lsrscan_msg->ranges[i])){
@@ -344,7 +344,7 @@ If yes, they are treated as the same cluster and no. of points for both are adde
 
 
     long double minEle =  *min_element(beg, end);
-
+    // double object_angle = (beg+end)/2;
     double meanX = aveX(sum, numOfPoints, storeMinDist, j);
     double meanY = aveY(sum, numOfPoints, storeMinDist, j);
 
@@ -376,12 +376,14 @@ If yes, they are treated as the same cluster and no. of points for both are adde
 
     if(minEle < 1.7 and numOfPoints[j] > 7) { //distance 
 
-      //ROS_INFO("Angle %f", angleD);
+      ROS_INFO("Angle %f", angleD);
       //ROS_INFO("Mean %f", mean);
+      // ROS_INFO("Num %d", num);
+      // ROS_INFO("object angle is %f", object_angle);
       ROS_INFO("size %f", sizeD);
       ROS_INFO("Cluster %d : %d points", j+1, numOfPoints[j]);
-      //ROS_INFO("Cluster %d : %Lf Min Distance", j+1, minEle);
-      aveD.push_back(mean);
+      ROS_INFO("Cluster %d : %Lf Min Distance", j+1, minEle);
+      // aveD.push_back(mean);
       minD.push_back(minEle);
       angle.push_back(angleD);
       size.push_back(sizeD);
@@ -395,6 +397,7 @@ If yes, they are treated as the same cluster and no. of points for both are adde
   }
 
   msg.num = num;
+  // ROS_INFO("Num %d", num);
   msg.aveD = aveD;
   msg.minD = minD;
   msg.angle = angle;
