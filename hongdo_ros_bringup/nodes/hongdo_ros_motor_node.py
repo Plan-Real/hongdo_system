@@ -59,26 +59,41 @@ class PacketWriteHandler:
 
    def write_register(self, param1, param2):
       self.write_packet("$SREGI," + str(param1) + ',' + param2)
+      #SERGI : Periodic Query 를 등록합니다.
+      #param1 : 등록 번호 ( 0 ~ 4, 최대 5 개 ) 
+      #param2 : QADC, QVW 등의 Query 명령어
       sleep(0.05)
 
    def write_periodic_query_value(self, param):
       self.write_packet("$SPERI," + str(param))
+      #SPERI : Periodic Query 의 전송 주기를 설정합니다.
+      #param : 전송 주기 ( ms , 최소 10 )
       sleep(0.05)
 
    def write_periodic_query_enable(self, param):
       self.write_packet("$SPEEN," + str(param))
+      #SPEEN : Periodic Query 를 활성화 / 비활성화 합니다.
+      #param : 0->disable, 1->Enable
       sleep(0.05)
 
    def write_init_odometry(self):
       self.write_packet("$SODO")
+      #SODO : SODO Odometer 의 값을 초기화 합니다. Encoder 값은 유지됩니다.
       sleep(0.05)
 
    def write_wheel_velocity(self, wheel_l_lin_vel, wheel_r_lin_vel):
       self.write_packet('$CDIFFV,{:.0f},{:.0f}'.format(wheel_l_lin_vel, wheel_r_lin_vel))
+      #CDIFFV 로봇의 목표 좌, 우 바퀴 속도를 설정합니다.
+         #범위 : -1200 ~ +1200
+         #MAX) MAXVW 에서 설정 가능
+      #param1 : 좌측 바퀴 목표 속도
+      #param2 : 우측 바퀴 목표 속도
 
    def write_base_velocity(self, lin_vel, ang_vel):
-      # lin_vel : mm/s, ang_vel : mrad/s
       self.write_packet('$CVW,{:.0f},{:.0f}'.format(lin_vel, ang_vel))
+      #CVW : 로봇의 속도, 각속도 설정 / 범위 : -MAX ~ +MAX / MAX ) MAXVW 에서 설정 가능
+      #lin_vel : 목표 속도
+      #ang_vel : 목표 각속도
 
    def write_packet(self, packet):
       if self._ph.get_port_state() == True:
@@ -86,10 +101,14 @@ class PacketWriteHandler:
 
    def stop_peen(self):
       self.write_packet("$SPEEN, 0")
+      #SPEEN : Periodic Query 를 활성화 / 비활성화 합니다.
+      #param : 0->disable, 1->Enable
       sleep(0.05)
 
    def stop_callback(self):
       self.write_packet("$SCBEN, 0")
+      #SCBEN : C, S 명령의 Callback 을 활성화 / 비활성화 합니다.
+      #param : 0->disable, 1->Enable
       sleep(0.05)
       
 class ReadLine:
@@ -165,19 +184,36 @@ class PacketReadHandler:
       if self._ph.get_port_state() == True:
          whole_packet = self._ph.read_port()
          if whole_packet:
-            packet = whole_packet.split((",").encode())
+            packet = whole_packet.split((',').encode) # ,는 유니코드로 44로 변환된다.
             try:
-               header = packet[0].split("#")[1]
+               header = packet[0].split("#")[1] 
                
                if header.startswith('QVW'):
+                  #QVW : 로봇의 현재 속도, 각속도를 읽어옵니다.
+                  #response1 : 현재 속도
+                  #response2 : 현재 각속도
                   self._vel = [int(packet[1]), int(packet[2])]
                elif header.startswith('QENCOD'):
+                  #QENCOD : 로봇의 Raw Encoder 값을 읽어옵니다. 
+                     #이 값은 16 비트 정수로 표현되며, 한 바퀴에 해당하는 값은
+                     #모델 별로 다릅니다
+                  #response1 : left encoder
+                  #response2 : right encoder
                   self._enc = [int(packet[1]), int(packet[2])]
                elif header.startswith('QODO'):
+                  #QODO 로봇의 Odometer 값을 읽어옵니다.(mm 단위)
+                  #response1 : left encorder
+                  #response2 ; right encorder
                   self._wodom = [int(packet[1]), int(packet[2])]
                elif header.startswith('QRPM'):
+                  #QRPM : 로봇의 현재 좌, 우 바퀴 분당 회전 속도를 읽어옵니다.
+                  #response1 : 좌측바퀴 현재 RPM
+                  #respinse2 : 우측바퀴 현재 RPM
                   self._rpm = [int(packet[1]), int(packet[2])]
                elif header.startswith('QDIFFV'):
+                  #QDIFFV : 로봇의 현재 좌, 우 바퀴속도를 읽어옵니다.
+                  #respones1 : 좌측바퀴 현재 속도
+                  #response2 : 우측바퀴 현재 속도
                   self._wvel = [int(packet[1]), int(packet[2])]
             except:
                pass
@@ -222,7 +258,7 @@ class PortHandler():
       return self._rl.readline()
       #try: 
       #   return (self._ser_io.readline().decode("utf-8")).strip('\r\n')
-      #except UnicodeDecodeError:
+      #except UnicodeDecodeError:속
       #   print('UnicodeDecodeError')
     
 class hongdorosMotorNode:
@@ -234,19 +270,19 @@ class hongdorosMotorNode:
       self.port_handler = PortHandler(port_name, baud_rate)
       
       # Set packet handler
-      self.packet_write_handler = PacketWriteHandler(self.port_handler)
-      self.packet_write_handler.stop_peen()
-      self.packet_write_handler.stop_callback()
-      self.packet_write_handler.write_init_odometry()
-      self.packet_write_handler.write_register(0, 'QENCOD')
-      self.packet_write_handler.write_register(1, 'QODO')
-      self.packet_write_handler.write_register(2, 'QDIFFV')
+      self.packet_write_handler = PacketWriteHandler(self.port_handler) #packetWrite class 활성화
+      self.packet_write_handler.stop_peen() #Periodic Query 비활성화
+      self.packet_write_handler.stop_callback() #C, S 명령의 Callback 비활성화
+      self.packet_write_handler.write_init_odometry() #odom 초기화
+      self.packet_write_handler.write_register(0, 'QENCOD') # 0번에 바퀴 encoder 불러오는 값 넣기
+      self.packet_write_handler.write_register(1, 'QODO')   # 1번에 바퀴 Odom 불러오는 값 넣기
+      self.packet_write_handler.write_register(2, 'QDIFFV') # 2번에 바퀴 좌,우 속도 불러오는 값 넣기
       self.packet_write_handler.write_register(3, '0') # 'QVW'
       self.packet_write_handler.write_register(4, '0') # 'QRPM'
-      self.packet_write_handler.write_periodic_query_value(20)
-      self.packet_write_handler.write_periodic_query_enable(1)
+      self.packet_write_handler.write_periodic_query_value(20) #전송주기 20ms
+      self.packet_write_handler.write_periodic_query_enable(1) #query 주기 활성화
 
-      self.packet_read_handler = PacketReadHandler(self.port_handler)
+      self.packet_read_handler = PacketReadHandler(self.port_handler) #packetRead class 활성화
 
       # Storaging
       self.odom_pose = OdomPose()
