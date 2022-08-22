@@ -1,0 +1,23 @@
+<?xml version="1.0"?> 
+<package format="2">
+  <name>hongdo_ros_tf2_broadcaster</name>
+  <version>0.0.0</version>
+  <description>
+		turtle_tf2 demonstrates how to write a tf2 broadcaster and listener with the turtlesim. The tutle_tf2_listener commands turtle2 to follow turtle1 around as you drive turtle1 using the keyboard.
+	</description>
+  <maintainer email="denis.stogl@mailbox.org">Denis Štogl</maintainer>
+  <license>BSD</license>
+  <author email="denis.stogl@mailbox.org">Denis Štogl</author>
+
+  <buildtool_depend>catkin</buildtool_depend>	
+  <depend>geometry_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+	<depend>turtlesim</depend>
+  <depend>nav_msgs</depend>
+
+</package>
