@@ -184,33 +184,33 @@ class PacketReadHandler:
       if self._ph.get_port_state() == True:
          whole_packet = self._ph.read_port()
          if whole_packet:
-            packet = whole_packet.split((',').encode) # ,는 유니코드로 44로 변환된다.
+            packet = whole_packet.split(b',') # ,는 유니코드로 44로 변환된다.
             try:
-               header = packet[0].split("#")[1] 
+               header = packet[0].split(b'#')[1] 
                
-               if header.startswith('QVW'):
+               if header.startswith(b'QVW'):
                   #QVW : 로봇의 현재 속도, 각속도를 읽어옵니다.
                   #response1 : 현재 속도
                   #response2 : 현재 각속도
                   self._vel = [int(packet[1]), int(packet[2])]
-               elif header.startswith('QENCOD'):
+               elif header.startswith(b'QENCOD'):
                   #QENCOD : 로봇의 Raw Encoder 값을 읽어옵니다. 
                      #이 값은 16 비트 정수로 표현되며, 한 바퀴에 해당하는 값은
                      #모델 별로 다릅니다
                   #response1 : left encoder
                   #response2 : right encoder
                   self._enc = [int(packet[1]), int(packet[2])]
-               elif header.startswith('QODO'):
+               elif header.startswith(b'QODO'):
                   #QODO 로봇의 Odometer 값을 읽어옵니다.(mm 단위)
                   #response1 : left encorder
                   #response2 ; right encorder
                   self._wodom = [int(packet[1]), int(packet[2])]
-               elif header.startswith('QRPM'):
+               elif header.startswith(b'QRPM'):
                   #QRPM : 로봇의 현재 좌, 우 바퀴 분당 회전 속도를 읽어옵니다.
                   #response1 : 좌측바퀴 현재 RPM
                   #respinse2 : 우측바퀴 현재 RPM
                   self._rpm = [int(packet[1]), int(packet[2])]
-               elif header.startswith('QDIFFV'):
+               elif header.startswith(b'QDIFFV'):
                   #QDIFFV : 로봇의 현재 좌, 우 바퀴속도를 읽어옵니다.
                   #respones1 : 좌측바퀴 현재 속도
                   #response2 : 우측바퀴 현재 속도
