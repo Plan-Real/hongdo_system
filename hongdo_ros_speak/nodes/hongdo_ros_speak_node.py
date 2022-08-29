@@ -1,26 +1,32 @@
 #!/usr/bin/env python
 
 
+import string
 from hongdo_ros_speak.srv import PlaySong, PlaySongResponse
 import rospy
+import rospkg
 import os
+
+class fileRoot(object):
+    pkg_path = rospkg.RosPack()
+    path = pkg_path.get_path('hongdo_ros_speak')
 
 class hongdorosSpeakNode:
     def __init__(self):
         rospy.Service('play_song', PlaySong, self.play_song_handle)
-        print('[info] Ready to receive sequence')
+        rospy.loginfo('Ready to receive sequence')
         rospy.on_shutdown(self.__del__)
 
     def play_song_handle(self, req):
-        print("[info] Returning %s"%req.sequence)
-        os.system("play /home/jeonghan/catkin_ws/src/hongdo_ros/hongdo_ros_speak/speak/%s.mp3"%req.sequence)
-        return PlaySongResponse()
+        rospy.loginfo("Returning %s"%req.sequence)
+        os.system("play " + fileRoot.path + "/speak/%s.mp3"%req.sequence)
+        return PlaySongResponse('finish')
 
     def main(self):
         rospy.spin()
 
     def __del__(self):
-        print("[info] terminating hongdo_ros_speak_node")
+        rospy.loginfo("terminating hongdo_ros_speak_node")
         # print("[info] Shutting down")
 
 if __name__ == "__main__":
