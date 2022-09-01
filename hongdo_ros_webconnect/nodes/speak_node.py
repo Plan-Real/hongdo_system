@@ -2,14 +2,14 @@
 
 
 import string
-from hongdo_ros_speak.srv import PlaySong, PlaySongResponse
+from hongdo_ros_webconnect.srv import PlaySong, PlaySongResponse
 import rospy
 import rospkg
 import os
 
 class fileRoot(object):
     pkg_path = rospkg.RosPack()
-    path = pkg_path.get_path('hongdo_ros_speak')
+    path = pkg_path.get_path('hongdo_ros_webconnect')
 
 class hongdorosSpeakNode:
     def __init__(self):
@@ -26,7 +26,7 @@ class hongdorosSpeakNode:
         rospy.spin()
 
     def __del__(self):
-        rospy.loginfo("terminating hongdo_ros_speak_node")
+        print("[info]terminating hongdo_ros_speak_node")
         # print("[info] Shutting down")
 
 if __name__ == "__main__":
