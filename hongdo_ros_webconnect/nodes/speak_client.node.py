@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
-from hongdo_ros_speak.srv import PlaySong, PlaySongRequest
+from hongdo_ros_webconnect.srv import PlaySong, PlaySongRequest
 
 class SpeakClientNode:
     def __init__(self):

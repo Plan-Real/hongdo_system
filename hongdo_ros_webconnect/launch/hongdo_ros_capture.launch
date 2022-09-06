@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="hongdo_ros_capture" type="capture_service.py" name="hongdo_ros_captrue_node"/>
+</launch>
