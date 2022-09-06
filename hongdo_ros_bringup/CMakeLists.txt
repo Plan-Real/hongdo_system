@@ -13,11 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   tf
-  usb_cam
   hongdo_ros_description
-  dynamixel_workbench_controllers
-  dynamixel_workbench_operators
-  hls_lfcd_lds_driver
   message_generation
 )
 
@@ -110,18 +106,13 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- CATKIN_DEPENDS hls_lfcd_lds_driver 
-                geometry_msgs 
+ CATKIN_DEPENDS geometry_msgs 
                 nav_msgs 
                 rospy 
                 sensor_msgs 
                 std_msgs 
                 tf 
-                usb_cam 
-                hongdo_ros_description 
-                hongdo_ros_obstacle 
-                dynamixel_workbench_operators
-                dynamixel_workbench_controllers
+                hongdo_ros_description
 )
 
 ###########
@@ -175,8 +166,8 @@ catkin_package(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  nodes/hongdo_ros_motor_r1_node.py
-  nodes/hongdo_ros_motor_r1v2_node.py
+  # nodes/hongdo_ros_motor_r1_node.py
+  # nodes/hongdo_ros_motor_r1v2_node.py
   # nodes/hongdo_packet_handler.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
