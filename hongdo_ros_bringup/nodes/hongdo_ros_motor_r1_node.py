@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-
-# original source code -> https://github.com/omorobot/omoros
-# modified by Bishop Pearson
-## we change omorobot code to hongdo_ros code
+#!/usr/bin/env python3
 
 import sys
 import rospy
@@ -10,7 +6,6 @@ import serial
 import io
 import math
 from time import sleep
-
 from sensor_msgs.msg import Imu, JointState
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist, Pose, Point, Vector3, Quaternion
@@ -97,6 +92,7 @@ class PacketWriteHandler:
 
    def write_packet(self, packet):
       if self._ph.get_port_state() == True:
+         print(packet)
          self._ph.write_port(packet)
 
    def stop_peen(self):
@@ -125,6 +121,7 @@ class ReadLine:
       while True:
          i = max(1, min(2048, self.s.in_waiting))
          data = self.s.read(i)
+         # print(data)
          i = data.find(b"\n")
          if i >= 0:
             r = self.buf + data[:i+1]
@@ -183,34 +180,37 @@ class PacketReadHandler:
    def read_packet(self):
       if self._ph.get_port_state() == True:
          whole_packet = self._ph.read_port()
+
+         print(whole_packet)
          if whole_packet:
-            packet = whole_packet.split(b',') # ,는 유니코드로 44로 변환된다.
+            packet = whole_packet.split(',')
+            # print(packet)
             try:
-               header = packet[0].split(b'#')[1] 
-               
+               header = packet[0].split('#')[1] 
+               # print(header)
                if header.startswith(b'QVW'):
                   #QVW : 로봇의 현재 속도, 각속도를 읽어옵니다.
                   #response1 : 현재 속도
                   #response2 : 현재 각속도
                   self._vel = [int(packet[1]), int(packet[2])]
-               elif header.startswith(b'QENCOD'):
+               elif header.startswith('QENCOD'):
                   #QENCOD : 로봇의 Raw Encoder 값을 읽어옵니다. 
                      #이 값은 16 비트 정수로 표현되며, 한 바퀴에 해당하는 값은
                      #모델 별로 다릅니다
                   #response1 : left encoder
                   #response2 : right encoder
                   self._enc = [int(packet[1]), int(packet[2])]
-               elif header.startswith(b'QODO'):
+               elif header.startswith('QODO'):
                   #QODO 로봇의 Odometer 값을 읽어옵니다.(mm 단위)
                   #response1 : left encorder
                   #response2 ; right encorder
                   self._wodom = [int(packet[1]), int(packet[2])]
-               elif header.startswith(b'QRPM'):
+               elif header.startswith('QRPM'):
                   #QRPM : 로봇의 현재 좌, 우 바퀴 분당 회전 속도를 읽어옵니다.
                   #response1 : 좌측바퀴 현재 RPM
                   #respinse2 : 우측바퀴 현재 RPM
                   self._rpm = [int(packet[1]), int(packet[2])]
-               elif header.startswith(b'QDIFFV'):
+               elif header.startswith('QDIFFV'):
                   #QDIFFV : 로봇의 현재 좌, 우 바퀴속도를 읽어옵니다.
                   #respones1 : 좌측바퀴 현재 속도
                   #response2 : 우측바퀴 현재 속도
@@ -238,6 +238,8 @@ class PortHandler():
       self._ser = serial.Serial(port_name, baud_rate)
       self._ser_io = io.TextIOWrapper(io.BufferedRWPair(self._ser, self._ser, 1), newline = '\r', line_buffering = True)
       self._rl = ReadLine(self._ser)
+      # self._ser.readline()
+      # self._ser.read(2)  
    def get_port_handler(self):
       return self._ser
 
@@ -251,16 +253,22 @@ class PortHandler():
       return self._ser.isOpen()
 
    def write_port(self, buffer):
-      # a = buffer + "\r\n"
-      self._ser.write((buffer + "\r\n").encode())
+      # print(a)
+      a = bytes(buffer + "\r\n", 'utf-8')
+      # print(a)       
+      self._ser.write(a)
 
    def read_port(self):
-      return self._rl.readline()
-      #try: 
-      #   return (self._ser_io.readline().decode("utf-8")).strip('\r\n')
-      #except UnicodeDecodeError:속
+      # print(self._rl)readline
+      my_r = self._ser.readline()
+      print(my_r)
+      # return (self._rl.readline().decode("utf-8")).strip('\r\n')
+      # try: 
+      #    print(self._ser_io.readline())
+      #    return (self._ser_io.readline().decode("utf-8")).strip('\r\n')
+      # except UnicodeDecodeError:
       #   print('UnicodeDecodeError')
-    
+   
 class hongdorosMotorNode:
    def __init__(self):
       # Open serial port
@@ -277,8 +285,8 @@ class hongdorosMotorNode:
       self.packet_write_handler.write_register(0, 'QENCOD') # 0번에 바퀴 encoder 불러오는 값 넣기
       self.packet_write_handler.write_register(1, 'QODO')   # 1번에 바퀴 Odom 불러오는 값 넣기
       self.packet_write_handler.write_register(2, 'QDIFFV') # 2번에 바퀴 좌,우 속도 불러오는 값 넣기
-      self.packet_write_handler.write_register(3, '0') # 'QVW'
-      self.packet_write_handler.write_register(4, '0') # 'QRPM'
+      self.packet_write_handler.write_register(3, 'QVW') # 'QVW'
+      self.packet_write_handler.write_register(4, 'QRPM') # 'QRPM'
       self.packet_write_handler.write_periodic_query_value(20) #전송주기 20ms
       self.packet_write_handler.write_periodic_query_enable(1) #query 주기 활성화
 
@@ -345,7 +353,6 @@ class hongdorosMotorNode:
 
    def cbTimerUpdateDriverData(self, event):
       self.packet_read_handler.read_packet()
-
       lin_vel_x = self.packet_read_handler.get_base_velocity()[0]
       ang_vel_z = self.packet_read_handler.get_base_velocity()[1]
 
@@ -516,6 +523,6 @@ class hongdorosMotorNode:
       rospy.loginfo("Shutting down. velocity will be 0")
 
 if __name__ == '__main__':
-    rospy.init_node('hongdo_ros_motor_node')
-    node = hongdorosMotorNode()
-    node.main()
+   rospy.init_node('hongdo_ros_motor_node')
+   node = hongdorosMotorNode()
+   node.main()

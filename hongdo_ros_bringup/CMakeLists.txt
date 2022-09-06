@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(hongdo_ros_bringup)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+# add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -175,7 +175,9 @@ catkin_package(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  nodes/hongdo_ros_motor_node.py
+  nodes/hongdo_ros_motor_r1_node.py
+  nodes/hongdo_ros_motor_r1v2_node.py
+  # nodes/hongdo_packet_handler.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
