@@ -1,10 +1,11 @@
 <launch>
   <arg name="set_port" default="/dev/ttyMotor"/>  
   <arg name="set_odom_mode" default="wheel_only"/>
-  <node pkg="hongdo_ros_bringup" type="hongdo_ros_motor_node_r1v2.py" name="hongdo_ros_motor_node" output="screen">
+  <node pkg="hongdo_ros_bringup" type="hongdo_ros_motor_r1v2_node.py" name="hongdo_ros_motor_node" output="screen">
       <param name="port" value="$(arg set_port)"/>
       <param name="baud" value="115200"/>
       <param name="odom_mode" value="$(arg set_odom_mode)"/>
-      <param name="modelName" value="r1"/>
+      <param name="use_imu_during_odom_calc/use_imu" value="False"/>
+      <!-- <param name="modelName" value="r1"/> -->
   </node>
 </launch>

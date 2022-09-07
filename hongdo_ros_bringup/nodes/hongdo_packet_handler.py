@@ -70,9 +70,9 @@ class PacketHandler2:
         if self.get_port_state() == True:
             whole_packet = self.read_port()
             if whole_packet:
-                packet = whole_packet.split(",")
+                packet = whole_packet.split(b',')
                 try:
-                    header = packet[0].split("#")[1]
+                    header = packet[0].split(b'#')[1]
                     if header.startswith(b'VW'):
                         self._vel = [int(packet[1]), int(packet[2])]
                     elif header.startswith(b'ENCOD'):

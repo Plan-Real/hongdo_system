@@ -8,25 +8,30 @@
 
   <!-- motor -->
 
-  <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_motor.launch">
+  <!-- <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_motor.launch">
     <arg name="set_port" value="$(arg set_port_motor)"/>
-  </include>
+  </include> -->
  
   <!-- dynamixel -->
 
-  <include file='$(find dynamixel_workbench_operators)/launch/hongdo_ros_joint_operator.launch'/>
-  <include file='$(find dynamixel_workbench_controllers)/launch/hongdo_ros_dynamixel_controllers.launch'/>
+  <!-- <include file='$(find dynamixel_workbench_operators)/launch/hongdo_ros_joint_operator.launch'/>
+  <include file='$(find dynamixel_workbench_controllers)/launch/hongdo_ros_dynamixel_controllers.launch'/> -->
 
-  <!-- lidar -->
+  <!-- lidar 
+  ->
 
-  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
+  <! <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
     <param name="port"         type="string" value="$(arg set_port_lidar)"/>  
     <param name="frame_id"     type="string" value="$(arg set_lidar_frame_id)"/>
-  </node>
+  </node> -->
 
   <!--obstacle cluster detect  -->
 
-  <include file='$(find hongdo_ros_obstacle)/launch/hongdo_ros_obstacle.launch'/>
+  <!-- <include file='$(find hongdo_ros_obstacle)/launch/hongdo_ros_obstacle.launch'/> -->
   
+  <!-- web node -->
+  
+  <include file='$(find hongdo_ros_bringup)/launch/hongdo_ros_web_connect.launch'/>
+
    
 </launch>

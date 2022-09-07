@@ -49,8 +49,9 @@ class hongdorosMotorNode:
       self.odom_mode = rospy.get_param("~odom_mode", "wheel_only")
       self.ph = PacketHandler2()
       self.ph.incomming_info = ['ODO', 'VW', "POSE", "GYRO"]
-      self.use_gyro = rospy.get_param("/use_imu_during_odom_calc/use_imu")
+      self.use_gyro = rospy.get_param("~use_imu_during_odom_calc/use_imu")
       self.ph.set_periodic_info(50)
+      self.ph.write_odometry_reset()
       sleep(0.1)
 
       # Storaging
@@ -85,7 +86,7 @@ class hongdorosMotorNode:
       rospy.loginfo('Wheel circumference: {:04f}m'.format(self.config.wheel_circumference))
       rospy.loginfo('Encoder step: {:04f}m/pulse'.format(self.config.encoder_step))
       rospy.loginfo('Encoder pulses per wheel rev: {:.2f} pulses/rev'.format(self.config.encoder_pulse_per_wheel_rev))
-      rospy.loginfo('Serial port: %s', self.port_handler.get_port_name())
+      # rospy.loginfo('Serial port: %s', self.ph.)
 
       # subscriber
       rospy.Subscriber("cmd_vel", Twist, self.cbSubCmdVelTMsg, queue_size=1)        # command velocity data subscriber
@@ -115,84 +116,84 @@ class hongdorosMotorNode:
       self.joint.joint_pos = [0.0, 0.0]
       self.joint.joint_vel = [0.0, 0.0]
 
-def update_odometry(self, odo_l, odo_r, trans_vel, orient_vel, vel_z):
-   odo_l /= 1000.
-   odo_r /= 1000.
-   trans_vel /= 1000.
-   orient_vel /= 1000.
+   def update_odometry(self, odo_l, odo_r, trans_vel, orient_vel, vel_z):
+      odo_l /= 1000.
+      odo_r /= 1000.
+      trans_vel /= 1000.
+      orient_vel /= 1000.
 
-   self.odom_pose.timestamp = rospy.Time.now()
-   dt = (self.odom_pose.timestamp - self.odom_pose.pre_timestamp).to_sec()
-   self.odom_pose.pre_timestamp = self.odom_pose.timestamp
+      self.odom_pose.timestamp = rospy.Time.now()
+      dt = (self.odom_pose.timestamp - self.odom_pose.pre_timestamp).to_sec()
+      self.odom_pose.pre_timestamp = self.odom_pose.timestamp
 
-   if self.use_gyro:
-      self.calc_yaw.wheel_ang += orient_vel * dt
-      self.odom_pose.theta = self.calc_yaw.calc_filter(vel_z*math.pi/180., dt)
-      rospy.loginfo('R1mini state : whl pos %1.2f, %1.2f, gyro : %1.2f, whl odom : %1.2f, robot theta : %1.2f', 
-                        odo_l, odo_r, vel_z,
-                        self.calc_yaw.wheel_ang*180/math.pi, 
-                        self.odom_pose.theta*180/math.pi )
-   else:
-      self.odom_pose.theta += orient_vel * dt
-      #rospy.loginfo('R1mini state : wheel pos %s, %s, speed %s, %s',
-      #                odo_l, odo_r, trans_vel, orient_vel)
+      if self.use_gyro:
+         self.calc_yaw.wheel_ang += orient_vel * dt
+         self.odom_pose.theta = self.calc_yaw.calc_filter(vel_z*math.pi/180., dt)
+         rospy.loginfo('R1mini state : whl pos %1.2f, %1.2f, gyro : %1.2f, whl odom : %1.2f, robot theta : %1.2f', 
+                           odo_l, odo_r, vel_z,
+                           self.calc_yaw.wheel_ang*180/math.pi, 
+                           self.odom_pose.theta*180/math.pi )
+      else:
+         self.odom_pose.theta += orient_vel * dt
+         #rospy.loginfo('R1mini state : wheel pos %s, %s, speed %s, %s',
+         #                odo_l, odo_r, trans_vel, orient_vel)
 
-   d_x = trans_vel * math.cos(self.odom_pose.theta) 
-   d_y = trans_vel * math.sin(self.odom_pose.theta) 
+      d_x = trans_vel * math.cos(self.odom_pose.theta) 
+      d_y = trans_vel * math.sin(self.odom_pose.theta) 
 
-   self.odom_pose.x += d_x * dt
-   self.odom_pose.y += d_y * dt
+      self.odom_pose.x += d_x * dt
+      self.odom_pose.y += d_y * dt
 
-   odom_orientation_quat = quaternion_from_euler(0, 0, self.odom_pose.theta)
+      odom_orientation_quat = quaternion_from_euler(0, 0, self.odom_pose.theta)
 
-   self.odom_vel.x = trans_vel
-   self.odom_vel.y = 0.
-   self.odom_vel.w = orient_vel
+      self.odom_vel.x = trans_vel
+      self.odom_vel.y = 0.
+      self.odom_vel.w = orient_vel
 
-   odom = Odometry()
-   odom.header.frame_id = self.tf_prefix+"/odom"
-   odom.child_frame_id = self.tf_prefix+"/base_footprint"
+      odom = Odometry()
+      odom.header.frame_id = "/odom"
+      odom.child_frame_id = "/base_footprint"
 
-   self.odom_broadcaster.sendTransform((self.odom_pose.x, self.odom_pose.y, 0.), 
-                                          odom_orientation_quat, self.odom_pose.timestamp, 
-                                          odom.child_frame_id, odom.header.frame_id)
+      self.odom_broadcaster.sendTransform((self.odom_pose.x, self.odom_pose.y, 0.), 
+                                             odom_orientation_quat, self.odom_pose.timestamp, 
+                                             odom.child_frame_id, odom.header.frame_id)
 
-   odom.header.stamp = rospy.Time.now()
-   odom.pose.pose = Pose(Point(self.odom_pose.x, self.odom_pose.y, 0.), Quaternion(*odom_orientation_quat))
-   odom.twist.twist = Twist(Vector3(self.odom_vel.x, self.odom_vel.y, 0), Vector3(0, 0, self.odom_vel.w))
+      odom.header.stamp = rospy.Time.now()
+      odom.pose.pose = Pose(Point(self.odom_pose.x, self.odom_pose.y, 0.), Quaternion(*odom_orientation_quat))
+      odom.twist.twist = Twist(Vector3(self.odom_vel.x, self.odom_vel.y, 0), Vector3(0, 0, self.odom_vel.w))
 
-   self.odom_pub.publish(odom)
+      self.odom_pub.publish(odom)
 
-def updatePoseStates(self, roll, pitch, yaw):
-   #Added to publish pose orientation of IMU
-   pose = Pose()
-   pose.orientation.x = roll
-   pose.orientation.y = pitch
-   pose.orientation.z = yaw
-   self.pub_pose.publish(pose)
+   def updatePoseStates(self, roll, pitch, yaw):
+      #Added to publish pose orientation of IMU
+      pose = Pose()
+      pose.orientation.x = roll
+      pose.orientation.y = pitch
+      pose.orientation.z = yaw
+      self.pub_pose.publish(pose)
 
-def updateJointStates(self, odo_l, odo_r, trans_vel, orient_vel):
-   odo_l /= 1000.
-   odo_r /= 1000.
+   def updateJointStates(self, odo_l, odo_r, trans_vel, orient_vel):
+      odo_l /= 1000.
+      odo_r /= 1000.
 
-   wheel_ang_left = odo_l / self.wheel_radius
-   wheel_ang_right = odo_r / self.wheel_radius
+      wheel_ang_left = odo_l / self.wheel_radius
+      wheel_ang_right = odo_r / self.wheel_radius
 
-   wheel_ang_vel_left = (trans_vel - (self.wheel_base / 2.0) * orient_vel) / self.wheel_radius
-   wheel_ang_vel_right = (trans_vel + (self.wheel_base / 2.0) * orient_vel) / self.wheel_radius
+      wheel_ang_vel_left = (trans_vel - (self.wheel_base / 2.0) * orient_vel) / self.wheel_radius
+      wheel_ang_vel_right = (trans_vel + (self.wheel_base / 2.0) * orient_vel) / self.wheel_radius
 
-   self.joint.joint_pos = [wheel_ang_left, wheel_ang_right]
-   self.joint.joint_vel = [wheel_ang_vel_left, wheel_ang_vel_right]
+      self.joint.joint_pos = [wheel_ang_left, wheel_ang_right]
+      self.joint.joint_vel = [wheel_ang_vel_left, wheel_ang_vel_right]
 
-   joint_states = JointState()
-   joint_states.header.frame_id = self.tf_prefix+"/base_link"
-   joint_states.header.stamp = rospy.Time.now()
-   joint_states.name = self.joint.joint_name
-   joint_states.position = self.joint.joint_pos
-   joint_states.velocity = self.joint.joint_vel
-   joint_states.effort = []
+      joint_states = JointState()
+      joint_states.header.frame_id = self.tf_prefix+"/base_link"
+      joint_states.header.stamp = rospy.Time.now()
+      joint_states.name = self.joint.joint_name
+      joint_states.position = self.joint.joint_pos
+      joint_states.velocity = self.joint.joint_vel
+      joint_states.effort = []
 
-   self.pub_joint_states.publish(joint_states)
+      self.pub_joint_states.publish(joint_states)
 
    def cbTimerUpdateDriverData(self, event):
       self.ph.read_packet()         
@@ -342,7 +343,6 @@ def updateJointStates(self, odo_l, odo_r, trans_vel, orient_vel):
 
    def __del__(self):
       print("terminating hongdo_ros_motor_node")
-      rospy.loginfo("Shutting down. velocity will be 0")
       self.ph.close_port()
 
 if __name__ == '__main__':
