@@ -59,7 +59,7 @@ class OpencvWebcam():
                 ret, frame = cap.read()                 # 카메라 프레임 읽기
                 if ret:
                     cv2.imshow('camera',frame)          # 프레임 화면에 표시
-                    cv2.imwrite(fileRoot.path+'/scripts/public/img/uploads/model.jpg', frame) # 프레임을 'photo.jpg'에 저장
+                    cv2.imwrite(self._save_path+'/model.jpg', frame) # 프레임을 'photo.jpg'에 저장
                     rospy.loginfo('capture success')
                     break
                 else:
@@ -101,7 +101,7 @@ class hongdorosWebconnectNode:
     def __init__(self):
         character_path=fileRoot.webconnect + '/images/hongdo.png'
         qr_save_path=fileRoot.web + '/scripts/public/img/uploads/AIimage.png'
-        opencv_save_path=fileRoot.web + '/scripts/public/img/uploads/model.jpg'
+        opencv_save_path=fileRoot.web + '/scripts/public/img/uploads'
         voice_path = fileRoot.webconnect + '/speak/voice'
         sound_path = fileRoot.webconnect + '/speak/sound'
 
