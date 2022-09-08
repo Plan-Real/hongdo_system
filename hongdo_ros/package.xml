@@ -10,12 +10,12 @@
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>hongdo_ros_bringup</exec_depend>
   <exec_depend>hongdo_ros_description</exec_depend>
+  <exec_depend>hongdo_ros_dynamixel</exec_depend>
   <exec_depend>hongdo_ros_gazebo</exec_depend>
-  <exec_depend>hongdo_ros_navigation</exec_depend>
-  <exec_depend>hongdo_ros_slam</exec_depend>
-  <exec_depend>hongdo_ros_teleop</exec_depend>
   <exec_depend>hongdo_ros_obstacle</exec_depend>
-  <!-- <exec_depend>hongdo_ros_marker_tracker</exec_depend> -->
-  <!-- The export tag contains other, unspecified, tags -->
+  <exec_depend>hongdo_ros_teleop</exec_depend>
+  <exec_depend>hongdo_ros_tf2_broadcaster</exec_depend>
+  <exec_depend>hongdo_ros_web</exec_depend>
+  <exec_depend>hongdo_ros_webconnect</exec_depend>
  <export><metapackage/></export>
 </package>
