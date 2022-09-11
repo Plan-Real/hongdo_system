@@ -45,21 +45,27 @@ class Qrmake():
 
 class OpencvWebcam():
     _save_path=None
+    _AI_path=None
+    _number=None
 
-    def __init__(self, save_path):
+    def __init__(self, save_path, AI_path):
+        self._number=0
         self._save_path = save_path
-    
+        self._AI_path = AI_path
+
     def capture(self, req):
+        self._number += 1
         rospy.sleep(0.05)
         cap = cv2.VideoCapture(4)                       # 0번 카메라 연결
         if cap.isOpened() :
             rospy.loginfo('camera is connected')
             while True:
-                rospy.sleep(0.45)
+                rospy.sleep(0.6)
                 ret, frame = cap.read()                 # 카메라 프레임 읽기
                 if ret:
                     cv2.imshow('camera',frame)          # 프레임 화면에 표시
-                    cv2.imwrite(self._save_path+'/model.jpg', frame) # 프레임을 'photo.jpg'에 저장
+                    cv2.imwrite(self._save_path+'/{0}.jpg'.format(self._number), frame) # 프레임을 'photo.jpg'에 저장
+                    cv2.imwrite(self._AI_path+'/model.jpg', frame)
                     rospy.loginfo('capture success')
                     break
                 else:
@@ -74,6 +80,8 @@ class OpencvWebcam():
     
     def __del__(self):
         self._save_path=None
+        self._AI_path=None
+        self._number=None
 
 class SoundStart:
     _voice_path=None
@@ -101,12 +109,13 @@ class hongdorosWebconnectNode:
     def __init__(self):
         character_path=fileRoot.webconnect + '/images/hongdo.png'
         qr_save_path=fileRoot.web + '/scripts/public/img/uploads/AIimage.png'
-        opencv_save_path=fileRoot.web + '/scripts/public/img/uploads'
+        opencv_save_path=fileRoot.web + '/scripts/public/hongdo_AI/origin_image'
+        AI_save_path=fileRoot.web + '/scripts/public/hongdo_AI/AI_input'
         voice_path = fileRoot.webconnect + '/speak/voice'
         sound_path = fileRoot.webconnect + '/speak/sound'
 
         self.qr_make=Qrmake(character_path,qr_save_path)
-        self.opencv_webcam=OpencvWebcam(opencv_save_path)
+        self.opencv_webcam=OpencvWebcam(opencv_save_path,AI_save_path)
         self.sound_start=SoundStart(voice_path, sound_path)
 
         ##service
