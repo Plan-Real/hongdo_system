@@ -35,17 +35,25 @@ contact : iam_midnight@naver.com
 
 The Hongdo robot is a robot that emphasizes the HRI perspective. Hongdo freely travels around the square and interacts with people. When you detect people, you approach them and talk to them. UI suitable for the event is produced, and humans interact with robots through UI. People can take pictures of themselves in the UI and convert them into various Character through various artificial intelligence technologies.
 
-##### Pictures from the event
+##### Festival photos and videos
+
+![kakaotalk_1664012771411 (1) (1) (1)](https://user-images.githubusercontent.com/98142496/192100213-434298d9-2b1d-484d-a7c5-c4f32bebdeb7.gif)
+
+<img src="https://user-images.githubusercontent.com/98142496/192099659-0172cb13-8c62-4199-8551-1cbf48f1827f.jpg" width="360" height="480"/>  <img src="https://user-images.githubusercontent.com/98142496/192099662-f4a619b8-fc9d-4ac7-97b2-509584ee4d85.jpg" width="640" height="480"/>
+
 
 
 
 ## Hardware system :
 
-#### Design
+### Design
 
 
+<img src="https://user-images.githubusercontent.com/98142496/192099216-b592f7ad-1079-46f9-9144-1aaa22e744a5.png" width="360" height="540"/> <img src="https://user-images.githubusercontent.com/98142496/192100569-c13b93d8-5193-4cb3-9acb-14f82dbc4cf1.png" width="360" height="480"/>
 
-#### Architecture
+### Architecture
+
+![omorobot_system](https://user-images.githubusercontent.com/98142496/192099227-008ed8e3-2eb9-4550-b3aa-bb648ad3f12f.png)
 
 
 
@@ -63,13 +71,14 @@ The Hongdo robot is a robot that emphasizes the HRI perspective. Hongdo freely t
 
 | **Input model**                                              | **Output model 1**                                           |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|                                                              |                                                              |
+| ![model](https://user-images.githubusercontent.com/98142496/192099320-d95b1a7d-dde2-4015-a8bc-bd2ef13b64d8.png)                                                             |    ![trained_model](https://user-images.githubusercontent.com/98142496/192099348-fc619ba1-7be5-4d63-9316-f5be57372f74.png)                                                          |
 |                                                              | [Vijish Madhavan of Artline](https://github.com/vijishmadhavan/ArtLine) |
 | **Output model 2**                                           | **Output model 3**                                           |
-|                                                              |                                                              |
+|                                                              |    
+![result_RGB](https://user-images.githubusercontent.com/98142496/192099371-f28bf4e0-4e86-4063-ac9c-153722ae81eb.jpg)                                                          | ![trained_model (1)](https://user-images.githubusercontent.com/98142496/192099561-dddc295a-bfce-4a5c-9661-9fed31a27ceb.png)
 | [Sketch Generation with Drawing Process Guided by Vector Flow and Grayscale](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale) | [animegan2-pytorch](https://github.com/bryandlee/animegan2-pytorch) |
 
-​	
+#### Jetson System
 
 
 
