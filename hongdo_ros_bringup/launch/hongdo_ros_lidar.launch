@@ -1,8 +1,0 @@
-<launch>
-  <!-- <arg name="set_port" default="/dev/ttyLiDAR"/>
-  <arg name="set_frame_id" default="base_scan"/>
-  <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="hlds_laser_publisher" output="screen">
-    <param name="port"         type="string" value="$(arg set_port)"/>  
-    <param name="frame_id"     type="string" value="$(arg set_frame_id)"/>
-  </node> -->
-</launch>
