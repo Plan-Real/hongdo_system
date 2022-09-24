@@ -11,7 +11,6 @@
   <exec_depend>hongdo_ros_bringup</exec_depend>
   <exec_depend>hongdo_ros_description</exec_depend>
   <exec_depend>hongdo_ros_dynamixel</exec_depend>
-  <exec_depend>hongdo_ros_gazebo</exec_depend>
   <exec_depend>hongdo_ros_obstacle</exec_depend>
   <exec_depend>hongdo_ros_teleop</exec_depend>
   <exec_depend>hongdo_ros_tf2_broadcaster</exec_depend>
