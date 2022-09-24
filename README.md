@@ -39,7 +39,7 @@ The Hongdo robot is a robot that emphasizes the HRI perspective. Hongdo freely t
 
 ![kakaotalk_1664012771411 (1) (1) (1)](https://user-images.githubusercontent.com/98142496/192100213-434298d9-2b1d-484d-a7c5-c4f32bebdeb7.gif)
 
-<img src="https://user-images.githubusercontent.com/98142496/192099659-0172cb13-8c62-4199-8551-1cbf48f1827f.jpg" width="360" height="480"/>  <img src="https://user-images.githubusercontent.com/98142496/192099662-f4a619b8-fc9d-4ac7-97b2-509584ee4d85.jpg" width="640" height="480"/>
+<img src="https://user-images.githubusercontent.com/98142496/192099659-0172cb13-8c62-4199-8551-1cbf48f1827f.jpg" width="270" height="360"/>  <img src="https://user-images.githubusercontent.com/98142496/192099662-f4a619b8-fc9d-4ac7-97b2-509584ee4d85.jpg" width="480" height="360"/>
 
 
 
