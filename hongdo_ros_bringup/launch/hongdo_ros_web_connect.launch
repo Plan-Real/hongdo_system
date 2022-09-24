@@ -1,0 +1,4 @@
+<launch>
+    <include file='$(find hongdo_ros_webconnect)/launch/hongdo_ros_webconnect.launch'/>
+    <include file='$(find hongdo_ros_web)/launch/hongdo_ros_web.launch'/>
+</launch>

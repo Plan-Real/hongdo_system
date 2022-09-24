@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hongdo_ros_bringup</name>
+  <version>0.0.0</version>
+  <description>
+    The hongdo robot bringup
+  </description>
+  <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf</depend>
+  <depend>hongdo_ros_description</depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+</package>

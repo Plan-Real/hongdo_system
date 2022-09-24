@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hongdo_ros</name>
+  <version>0.0.0</version>
+  <description>
+    The hongdo robot meta package
+  </description>
+  <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>hongdo_ros_bringup</exec_depend>
+  <exec_depend>hongdo_ros_description</exec_depend>
+  <exec_depend>hongdo_ros_dynamixel</exec_depend>
+  <exec_depend>hongdo_ros_obstacle</exec_depend>
+  <exec_depend>hongdo_ros_teleop</exec_depend>
+  <exec_depend>hongdo_ros_tf2_broadcaster</exec_depend>
+  <exec_depend>hongdo_ros_web</exec_depend>
+  <exec_depend>hongdo_ros_webconnect</exec_depend>
+ <export><metapackage/></export>
+</package>
