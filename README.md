@@ -3,13 +3,15 @@
 ## project Team : W.A.B
 
 ### Member : 
-[김정한(Jeonghan Kim)](https://github.com/jeong-han-kim), [남윤재(Yunjea Nam)](https://github.com/ujma1234), 이왕건(Wanggeon Lee), 박수환(Suhwan Park), [박종찬(Jongchan Park)](https://github.com/coldbell8918), 김새벽(Saebyeok Kim), 김다현(Dahyun Kim), [이하연(Hayeon Lee)](https://github.com/quokkalover)
+[김정한(Jeonghan Kim)](https://github.com/jeong-han-kim), [남윤재(Yunjea Nam)](https://github.com/ujma1234), 이왕건(Wanggeon Lee), 박수환(Suhwan Park), [박종찬(Jongchan Park)](https://github.com/coldbell8918), 김새벽(Saebyeok Kim), 김다현(Dahyun Kim), [이하연(Hayeon Lee)](https://github.com/quokkalover)Cancel changes
 
 ---
 
 #### Robot Hardware Developer : 
 
 이왕건(Wanggeon Lee), 박수환(Suhwan Park)
+
+contact : dldhkdrjs2@hanyang.ac.kr, uni3967@hanyang.ac.kr
 
 #### Robot Software Developer :
 
