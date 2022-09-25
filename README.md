@@ -63,24 +63,23 @@ The Hongdo robot is a robot that emphasizes the HRI perspective. Hongdo freely t
 
 ## Software system :
 
-#### NUC System
+### NUC System
+#### web
+If you are curious about the contents related to the web, click this link.
+[hongdo_ros_web](https://github.com/Hanyang-WAB/hongdo_system/tree/hongdo_master/hongdo_ros_web)
 
-##### web
-
-
-
-##### AI
+#### AI
 
 | **Input model**                                              | **Output model 1**                                           |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![model](https://user-images.githubusercontent.com/98142496/192099320-d95b1a7d-dde2-4015-a8bc-bd2ef13b64d8.png)                                                             |    ![trained_model](https://user-images.githubusercontent.com/98142496/192099348-fc619ba1-7be5-4d63-9316-f5be57372f74.png)                                                          |
 |                                                              | [Vijish Madhavan of Artline](https://github.com/vijishmadhavan/ArtLine) |
-| **Output model 2**                                           | **Output model 3**                                           |
+|                      **Output model 2**                      |                         **Output model 3**                   |
 |                                                              |    
 ![result_RGB](https://user-images.githubusercontent.com/98142496/192099371-f28bf4e0-4e86-4063-ac9c-153722ae81eb.jpg)                                                          | ![trained_model (1)](https://user-images.githubusercontent.com/98142496/192099561-dddc295a-bfce-4a5c-9661-9fed31a27ceb.png)
 | [Sketch Generation with Drawing Process Guided by Vector Flow and Grayscale](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale) | [animegan2-pytorch](https://github.com/bryandlee/animegan2-pytorch) |
 
-#### Jetson System
+### Jetson System
 
 
 
