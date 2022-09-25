@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body main .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body main .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .duru {
+  width: 44vw;
+  height: 95vh;
+  left: 8vw;
+  top: 0vh;
+  position: absolute;
+  overflow: hidden;
+}
+body main .duru .duru2 {
+  width: 100%;
+  top: 0px;
+  height: 103%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 3;
+}
+body main .duru .duru2 img {
+  width: 44vw;
+  height: 99vh;
+  object-fit: cover;
+}
+body main .duru .duru1 {
+  width: 100%;
+  height: 5vh;
+  top: 0vh;
+  left: 0%;
+  position: absolute;
+  z-index: 4;
+  animation: duru1_move linear 1s;
+  animation-fill-mode: forwards;
+  filter: blur(0.5vh);
+}
+@keyframes duru1_move {
+  0% {
+    top: 0vh;
+  }
+  100% {
+    top: 90vh;
+    filter: blur(0vh);
+  }
+}
+body main .duru .duru1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .duru .bg3 {
+  width: 100%;
+  height: 95vh;
+  top: 5vh;
+  left: 0%;
+  position: absolute;
+  z-index: 4;
+  animation: duru3_move linear 1s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+body main .duru .bg3 .img_bg {
+  width: 100vw;
+  height: 100vh;
+  top: -5vh;
+  left: -8vw;
+  position: absolute;
+  object-fit: fill;
+  animation: bg_move linear 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bg_move {
+  0% {
+    top: -5vh;
+    left: -8vw;
+  }
+  100% {
+    top: -95vh;
+    left: -8vw;
+  }
+}
+@keyframes duru3_move {
+  0% {
+    top: 5vh;
+    height: 95vh;
+  }
+  100% {
+    top: 95vh;
+    height: 0vh;
+  }
+}
+body main .text {
+  width: 40vw;
+  height: 12vh;
+  top: 8vh;
+  left: 53vw;
+  position: absolute;
+  opacity: 0;
+  animation: fadein 0.5s linear;
+  animation-fill-mode: forwards;
+}
+body main .text img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: contrast(0%);
+}
+body main .text .txt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -8%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 5vh "Nanum Brush Script";
+  color: #fff;
+}
+body main .select_effect {
+  width: 30vw;
+  height: 67vh;
+  top: 23vh;
+  left: 58vw;
+  position: absolute;
+  opacity: 0;
+  animation: fadein 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+body main .select_effect .s1 {
+  width: 44%;
+  height: 47%;
+  position: absolute;
+  animation: d_sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s1_s {
+  width: 44%;
+  height: 47%;
+  position: absolute;
+  filter: saturate(150%);
+  animation: sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s1_s img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s2 {
+  width: 44%;
+  height: 47%;
+  right: 0px;
+  position: absolute;
+  animation: d_sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s2_s {
+  width: 44%;
+  height: 47%;
+  right: 0px;
+  filter: saturate(150%);
+  position: absolute;
+  animation: sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s2_s img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s3 {
+  width: 44%;
+  height: 47%;
+  bottom: 0px;
+  position: absolute;
+  animation: d_sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s3_s {
+  width: 44%;
+  height: 47%;
+  bottom: 0px;
+  position: absolute;
+  filter: saturate(150%);
+  animation: sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s3_s img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s4 {
+  width: 44%;
+  height: 47%;
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  animation: d_sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .select_effect .s4_s {
+  width: 44%;
+  height: 47%;
+  bottom: 0px;
+  right: 0px;
+  filter: saturate(150%);
+  position: absolute;
+  animation: sizing 0.3s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_effect .s4_s img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+body main .off_next_btn {
+  visibility: hidden;
+}
+body main .next_btn {
+  width: 5vw;
+  height: 10vh;
+  top: 80vh;
+  left: 91vw;
+  position: absolute;
+  animation: fadein 0.5s linear;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+body main .next_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 2vh rgba(0, 0, 0, 0.8));
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sizing {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes d_sizing {
+  0% {
+    transform: scale(1.1);
+    filter: saturate(150%);
+  }
+  100% {
+    transform: scale(1);
+    filter: saturate(100%);
+  }
+}
+
+/*# sourceMappingURL=select_effect_style.css.map */

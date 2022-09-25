@@ -1,0 +1,3 @@
+<launch>
+      <node pkg="hongdo_ros_web" type="talker.js" name="hongdo_ros_web_node"/>
+</launch>

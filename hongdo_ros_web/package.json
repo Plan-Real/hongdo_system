@@ -1,0 +1,28 @@
+{
+  "name": "rosnodejs_examples",
+  "version": "0.0.0",
+  "description": "Example programs for ROS Node Javascript client library",
+  "keywords": [
+    "ros"
+  ],
+  "scripts": {
+    "talker": "node scripts/talker.js",
+    "listener": "node scripts/listener.js"
+  },
+  "author": "Ian McMahon",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RethinkRobotics-opensource/rosnodejs_examples"
+  },
+  "dependencies": {
+    "MD5": "^1.3.0",
+    "express": "^4.18.1",
+    "folder": "0.0.4",
+    "imgbb-uploader": "^1.5.0",
+    "ros": "^1.0.4",
+    "rosnodejs": "^3.1.0",
+    "tarball": "0.0.5",
+    "url": "^0.11.0"
+  }
+}

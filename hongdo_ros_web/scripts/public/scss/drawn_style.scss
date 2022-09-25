@@ -1,0 +1,322 @@
+@charset "UFT-8";
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  main {
+    width: 100%;
+    height: 100%;
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+    }
+
+    .duru {
+      width: 44vw;
+      height: 95vh;
+      left: 8vw;
+      top: 0vh;
+      position: absolute;
+      overflow: hidden;
+      z-index: 3;
+
+      .duru2 {
+          width: 100%;
+          top: 0px;
+          height: 103%;
+          position: absolute;
+          overflow: hidden;
+          z-index: 3;
+
+          img {
+              width: 44vw;
+              height: 99vh;
+              object-fit: cover;
+          }
+
+          .img {
+            width: 86%;
+            left: 7%;
+            height: 80%;
+            top: 6%;
+            position: absolute;
+            z-index: 4;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+      }
+
+      .duru1 {
+          width: 100%;
+          height: 5vh;
+          top: 0vh;
+          left: 0%;
+          position: absolute;
+          z-index: 4;
+          animation: duru1_move linear 1s;
+          animation-fill-mode: forwards;
+          filter: blur(0.5vh);
+
+          @keyframes duru1_move {
+              0% {top: 0vh;}
+              100% {top:90vh;filter: blur(0.0vh);}
+          }
+
+          img {
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
+          }
+      }
+
+      .bg3 {
+          width: 100%;
+          height: 95vh;
+          top: 5vh;
+          left: 0%;
+          position: absolute;
+          z-index: 4;
+          animation: duru3_move linear 1s;
+          animation-fill-mode: forwards;
+          overflow: hidden;
+
+          .img_bg {
+              width: 100vw;
+              height: 100vh;
+              top: -5vh;
+              left: -8vw;
+              position: absolute;
+              object-fit: fill;
+              animation: bg_move linear 1s;
+              animation-fill-mode: forwards;
+          }
+
+          @keyframes bg_move {
+              0% {
+                  top: -5vh;
+                  left: -8vw;
+              }
+              100% {
+                  top: -95vh;
+                  left: -8vw;
+              }
+          }
+
+          @keyframes duru3_move {
+              0% {
+                  top: 5vh;
+                  height: 95vh;
+              }
+              100% {
+                  top:95vh;
+                  height: 0vh;
+              }
+          }
+      }
+    }
+
+    .QR {
+      width: 26vw;
+      height: 26vw;
+      left: 62vw;
+      top: 35vh;
+      position: absolute;
+      background: #fff;
+      opacity: 0;
+      animation: fadein 0.5s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .text {
+      width: 30vw;
+      height: 12vh;
+      top: 18vh;
+      left: 60vw;
+      position: absolute;
+      opacity: 0;
+      animation: fadein 0.5s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+          filter: contrast(0%);
+      }
+
+      .txt {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: -8%;
+          left: 0%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font: 5vh "Nanum Brush Script";
+          color: #fff;
+      }
+    }
+
+    .next_btn {
+      width: 5vw;
+      height: 10vh;
+      top: 80vh;
+      left: 91vw;
+      position: absolute;
+      animation: fadein 0.5s linear;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+          filter: drop-shadow(2px 2px 2vh rgba(0,0,0,0.8));
+      }
+    }
+
+    .off_end {
+      visibility: hidden;
+    }
+
+    .end {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+      z-index: 4;
+      animation: fadein 0.5s linear;
+      animation-fill-mode: forwards;
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: rgba(0,0,0,0.8);
+        z-index: 5;
+      }
+
+      .img1 {
+        width: 60vw;
+        left: 20vw;
+        height: 43vh;
+        top: 18vh;
+        position: absolute;
+        z-index: 6;
+        object-fit: fill;
+      }
+
+      .txt_end1 {
+        width: 54vw;
+        left: 23vw;
+        height: 23vh;
+        top: 30vh;
+        position: absolute;
+        z-index: 6;
+        font: 6vh "Nanum Brush Script";
+        .txt_end1_1, .txt_end1_2, .txt_end1_3 {
+          width: 100%;
+          height: 33%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .img2 {
+        width: 56.9vw;
+        left: 21.59vw;
+        height: 16vh;
+        top: 61vh;
+        position: absolute;
+        z-index: 6;
+        object-fit: fill;
+        
+      }
+
+      .img2_b {
+        width: 56.9vw;
+        left: 21.59vw;
+        height: 16vh;
+        top: 61vh;
+        position: absolute;
+        z-index: 6;
+        object-fit: fill;
+        animation: bigger 0.3s linear;
+      }
+
+      .txt_end2_b {
+        width: 52.9vw;
+        left: 23.59vw;
+        height: 16vh;
+        top: 61vh;
+        position: absolute;
+        z-index: 6;
+        font: 6vh "Nanum Brush Script";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bigger 0.3s linear;
+      }
+
+      .txt_end2 {
+        width: 52.9vw;
+        left: 23.59vw;
+        height: 16vh;
+        top: 61vh;
+        position: absolute;
+        z-index: 6;
+        font: 6vh "Nanum Brush Script";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes bigger {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.1);}
+  100%{transform: scale(1);}
+}

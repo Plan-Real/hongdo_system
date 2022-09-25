@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+// Nanum Brush Script
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.btn_home {
+    z-index: 31;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}

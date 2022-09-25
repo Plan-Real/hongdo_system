@@ -1,0 +1,808 @@
+@charset "UFT-8";
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    main {
+        width: 100%;
+        height: 100%;
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .mt {
+            width: 60vw;
+            height: 60vh;
+            position: absolute;
+            left: -45vw;
+            bottom: -30vh;
+            animation: mt_move 0.7s ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0.3s;
+            z-index: 3;
+
+            @keyframes mt_move {
+                0%{
+                    left: -30vw;
+                    bottom: -20vh;
+                }
+                100%{
+                    left: -20vw;
+                    bottom: -10vh;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .hong2 {
+            width: 30vw;
+            height: 40vh;
+            z-index: 2;
+            position: absolute;
+            bottom: -40vh;
+            left: -5vw;
+            animation: hong2_move 0.7s ease-out;
+            animation-delay: 1.3s;
+            animation-fill-mode: forwards;
+
+            @keyframes hong2_move {
+                0%{
+                    bottom: -40vh;
+                    left: -10vw;
+                }
+                100%{
+                    bottom: 8vh;
+                    left: 0vw;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .bg2 {
+            width: 80vw;
+            height: 80vh;
+            position: absolute;
+            right: -100vw;
+            bottom: -80vh;
+            animation: bg_move 0.7s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 0.2s;
+            z-index: 2;
+
+            @keyframes bg_move {
+                0%{
+                    right: -60vw;
+                    bottom: -50vh;
+                }
+                100%{
+                    right: -20vw;
+                    bottom: 0vh;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .txt_box {
+            width: 60vw;
+            height: 50vh;
+            position: absolute;
+            z-index: 3;
+            top: 13vh;
+            left: 20vw;
+            opacity: 0;
+            animation: fadein 0.5s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 2.2s;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_1 {
+                width: 90%;
+                height: 55%;
+                top: 26%;
+                left: 5%;
+                position: absolute;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+
+                .tx_0 {
+                    visibility: hidden;
+                }
+
+                .tx1 {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 2vh;
+                    opacity: 0;
+                    animation: fadein 1.5s linear;
+                    animation-fill-mode: forwards;
+                }
+                .tx2 {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    animation: fadein 1.5s linear;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1s;
+                }
+                .tx3 {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 2vh;
+                    opacity: 0;
+                    animation: fadein 1.5s linear;
+                    animation-fill-mode: forwards;
+                    animation-delay: 2s;
+                }
+            }
+
+            
+        }
+
+        .txt_box_ {
+            width: 60vw;
+            height: 50vh;
+            position: absolute;
+            z-index: 3;
+            top: 13vh;
+            left: 20vw;
+            animation: box_move 0.3s linear;
+            animation-fill-mode: forwards;
+            @keyframes box_move {
+                0%{top: 13vh;}
+                100%{top: 5vh;}
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_1 {
+                width: 90%;
+                height: 55%;
+                top: 26%;
+                left: 5%;
+                position: absolute;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+            
+                .tx_0 {
+                    visibility: hidden;
+                }
+            
+                .tx1 {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 2vh;
+                    opacity: 1;
+                }
+                .tx2 {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 1;
+                }
+                .tx3 {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 2vh;
+                    opacity: 1;
+                }
+            }
+
+            
+        }
+
+        .s_box {
+            visibility: hidden;
+        }
+
+        .s_box1 {
+            width: 56.8vw;
+            height: 20vh;
+            position: absolute;
+            z-index: 2;
+            top: 38.6vh;
+            left: 21.7vw;
+            animation: s_box_move1 0.3s linear;
+            animation-fill-mode: forwards;
+
+            @keyframes s_box_move1 {
+                0%{top: 38.6vh;}
+                100%{top:46.6vh;}
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_s1 {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+                z-index: 2;
+            }
+
+        }
+
+        .s_box1_b {
+            width: 56.8vw;
+            height: 20vh;
+            position: absolute;
+            top:46.6vh;
+            left: 21.7vw;
+            z-index: 3;
+            animation: big 0.2s linear;
+            animation-fill-mode: forwards;
+            transform: scale(1);
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_s1 {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+                z-index: 2;
+            }
+
+        }
+
+        .s_box1_f {
+            width: 56.8vw;
+            height: 20vh;
+            position: absolute;
+            top:46.6vh;
+            left: 21.7vw;
+            z-index: 3;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_s1 {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+                z-index: 2;
+            }
+
+        }
+
+        .s_box2 {
+            width: 56.8vw;
+            height: 20vh;
+            position: absolute;
+            z-index: 2;
+            top: 62vh;
+            left: 21.7vw;
+            animation: s_box_move2 0.3s linear;
+            animation-fill-mode: forwards;
+
+            @keyframes s_box_move2 {
+                0%{top: 38.6vh;}
+                100%{top: 62vh;}
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_s2 {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+                z-index: 2;
+            }
+
+        }
+
+        .s_box2_b {
+            width: 56.8vw;
+            height: 20vh;
+            position: absolute;
+            top: 62vh;
+            left: 21.7vw;
+            z-index: 3;
+            animation: big 0.2s linear;
+            animation-fill-mode: forwards;
+            transform: scale(1);
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_s2 {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+                z-index: 2;
+            }
+
+        }
+
+        .s_box2_f {
+            width: 56.8vw;
+            height: 20vh;
+            position: absolute;
+            top: 62vh;
+            left: 21.7vw;
+            z-index: 3;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .txt_s2 {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+                z-index: 2;
+            }
+
+        }
+
+        .off_black {
+            visibility: hidden;
+        }
+
+        .black {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: rgba(0,0,0,0.5);
+            z-index: 4;
+        }
+
+        .off_wrn_box {
+            visibility: hidden;
+        }
+
+        .wrn_box {
+            width: 80vw;
+            height: 60vh;
+            left: 10vw;
+            top: 15vh;
+            position: absolute;
+            z-index: 5;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .wrn_tx1 {
+                width: 100%;
+                height: 30%;
+                left: 0px;
+                top: 20%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+            }
+
+            .wrn_tx2 {
+                width: 100%;
+                height: 30%;
+                left: 0px;
+                top: 35%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+            }
+
+            .yes {
+                width: 26%;
+                height: 14%;
+                left: 45%;
+                top: 55%;
+                position: absolute;
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    left: 53%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .yes_b {
+                width: 26%;
+                height: 14%;
+                left: 45%;
+                top: 55%;
+                position: absolute;
+                animation: big 0.3s linear;
+                animation-fill-mode: forwards;
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    left: 53%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .no {
+                width: 26%;
+                height: 14%;
+                right: 45%;
+                top: 55%;
+                position: absolute;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    right: 37%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+            }
+
+            .no_b {
+                width: 26%;
+                height: 14%;
+                right: 45%;
+                top: 55%;
+                position: absolute;
+                animation: big 0.3s linear;
+                animation-fill-mode: forwards;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    right: 37%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+            }
+        }
+
+        .dis_wrn_box {
+            width: 80vw;
+            height: 60vh;
+            left: 10vw;
+            top: 15vh;
+            position: absolute;
+            z-index: 5;
+            opacity: 1;
+            animation: wrn_dis 0.5s linear;
+            animation-fill-mode: forwards;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .wrn_tx1 {
+                width: 100%;
+                height: 30%;
+                left: 0px;
+                top: 20%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+            }
+
+            .wrn_tx2 {
+                width: 100%;
+                height: 30%;
+                left: 0px;
+                top: 35%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 5.7vh "Nanum Brush Script";
+                color: #000;
+            }
+
+            .yes {
+                width: 26%;
+                height: 14%;
+                left: 45%;
+                top: 55%;
+                position: absolute;
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    left: 53%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .yes_b {
+                width: 26%;
+                height: 14%;
+                left: 45%;
+                top: 55%;
+                position: absolute;
+                animation: big 0.3s linear;
+                animation-fill-mode: forwards;
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    left: 53%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .no {
+                width: 26%;
+                height: 14%;
+                right: 45%;
+                top: 55%;
+                position: absolute;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    right: 37%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+            }
+
+            .no_b {
+                width: 26%;
+                height: 14%;
+                right: 45%;
+                top: 55%;
+                position: absolute;
+                animation: big 0.3s linear;
+                animation-fill-mode: forwards;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .t {
+                    width: 100%;
+                    height: 100%;
+                    right: 37%;
+                    top: 55%;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 5;
+                    align-items: center;
+                    font: 5.7vh "Nanum Brush Script";
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    
+}
+
+@keyframes big {
+    0%{transform: scale(
+        1
+    );}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+
+@keyframes wrn_dis {
+    0%{transform: scale(1);opacity: 1;}
+    20%{transform: scale(1.1);opacity: 1;}
+    100%{transform: scale(0);opacity: 0;}
+}

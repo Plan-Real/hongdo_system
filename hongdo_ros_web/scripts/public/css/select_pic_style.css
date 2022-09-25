@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body main .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body main .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .off_duru {
+  visibility: hidden;
+}
+body main .duru {
+  width: 44vw;
+  height: 95vh;
+  left: 28vw;
+  top: 0vh;
+  position: absolute;
+  overflow: hidden;
+}
+body main .duru .duru2 {
+  width: 100%;
+  top: 0px;
+  height: 103%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+body main .duru .duru2 img {
+  width: 44vw;
+  height: 99vh;
+  object-fit: cover;
+}
+body main .duru .duru2 .display {
+  z-index: 3;
+  position: absolute;
+  top: 8vh;
+  left: 2.8vw;
+  width: 38.5vw;
+  height: 38.5vw;
+  overflow: hidden;
+}
+body main .duru .duru2 .display img {
+  position: absolute;
+  width: 68.4vw;
+  height: 38.5vw;
+  left: -14.95vw;
+  top: 0vh;
+  object-fit: contain;
+}
+body main .duru .duru1 {
+  width: 100%;
+  height: 5vh;
+  top: 0vh;
+  left: 0%;
+  position: absolute;
+  z-index: 3;
+  animation: duru1_move linear 1s;
+  animation-fill-mode: forwards;
+  filter: blur(0.5vh);
+}
+@keyframes duru1_move {
+  0% {
+    top: 0vh;
+  }
+  100% {
+    top: 90vh;
+    filter: blur(0vh);
+  }
+}
+body main .duru .duru1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .duru .bg3 {
+  width: 100%;
+  height: 95vh;
+  top: 5vh;
+  left: 0%;
+  position: absolute;
+  z-index: 3;
+  animation: duru3_move linear 1s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+body main .duru .bg3 .img_bg {
+  width: 100vw;
+  height: 100vh;
+  top: -5vh;
+  left: -28vw;
+  position: absolute;
+  object-fit: fill;
+  animation: bg_move linear 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bg_move {
+  0% {
+    top: -5vh;
+    left: -28vw;
+  }
+  100% {
+    top: -95vh;
+    left: -28vw;
+  }
+}
+@keyframes duru3_move {
+  0% {
+    top: 5vh;
+    height: 95vh;
+  }
+  100% {
+    top: 95vh;
+    height: 0vh;
+  }
+}
+body main .deco1 {
+  width: 50vw;
+  height: 100vh;
+  top: -100vh;
+  left: -10vw;
+  position: absolute;
+  animation: deco_move 0.8s ease-in;
+  animation-fill-mode: forwards;
+}
+body main .deco1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body main .deco2 {
+  width: 50vw;
+  height: 100vh;
+  top: -100vh;
+  left: 60vw;
+  position: absolute;
+  animation: deco_move 0.8s ease-in;
+  animation-fill-mode: forwards;
+}
+body main .deco2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@keyframes deco_move {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes big {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body main .off_announce_1 {
+  visibility: hidden;
+}
+body main .announce_1 {
+  width: 40vw;
+  height: 14vh;
+  opacity: 0.9;
+  left: 30vw;
+  top: 75vh;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  animation: fadein 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+body main .announce_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .announce_1 .txt1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 6.2vh "Nanum Brush Script";
+  position: absolute;
+  top: -1.3vh;
+  left: 0px;
+  color: #fff;
+}
+body main .select_btn_box {
+  right: -10vw;
+  bottom: 2vh;
+  width: 21vw;
+  height: 35vh;
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  transform: rotateZ(30deg);
+  animation: btn_appear ease-out 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes btn_appear {
+  0% {
+    right: -50vw;
+    bottom: 40vh;
+    transform: rotateZ(30deg);
+  }
+  100% {
+    right: 0vw;
+    bottom: 0vh;
+    transform: rotateZ(0deg);
+  }
+}
+body main .select_btn_box .no_btn {
+  top: 0vh;
+  left: 3%;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+}
+body main .select_btn_box .no_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .select_btn_box .no_btn .no {
+  position: absolute;
+  top: 63%;
+  left: 37%;
+  font: 4vh "Nanum Brush Script";
+}
+body main .select_btn_box .yes_btn {
+  width: 73%;
+  height: 25%;
+  top: 56%;
+  left: 3.5%;
+  position: absolute;
+}
+body main .select_btn_box .yes_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .select_btn_box .yes_btn .yes {
+  position: absolute;
+  top: 24%;
+  left: 56%;
+  font: 4vh "Nanum Brush Script";
+}
+body main .select_btn_box .yes_btn_click {
+  width: 73%;
+  height: 25%;
+  top: 56%;
+  left: 3.5%;
+  position: absolute;
+  animation: click_motion 0.5s linear;
+  cursor: pointer;
+}
+body main .select_btn_box .yes_btn_click img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .select_btn_box .yes_btn_click .yes {
+  position: absolute;
+  top: 24%;
+  left: 56%;
+  font: 4vh "Nanum Brush Script";
+}
+
+@keyframes click_motion {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=select_pic_style.css.map */

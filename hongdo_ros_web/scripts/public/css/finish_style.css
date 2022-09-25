@@ -1,0 +1,1472 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #b1e1e2;
+}
+body main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+body main .off_bg {
+  visibility: hidden;
+}
+body main .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #b1e1e2;
+  z-index: 15;
+  opacity: 1;
+  animation: on_1 2s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes on_1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body main .off_select_article {
+  visibility: hidden;
+}
+body main .select_article {
+  z-index: 1;
+  position: absolute;
+  border: 1px solid blue;
+  width: 90vw;
+  height: 80vh;
+  left: 2vw;
+  top: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
+  filter: blur(0.5vh);
+  animation: blur_off 1s linear;
+  animation-fill-mode: forwards;
+}
+body main .select_article :nth-child(1) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(1) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(2) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(2) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(3) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(3) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(4) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(4) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(5) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(5) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(6) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(6) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(7) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(7) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(8) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(8) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(9) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(9) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(10) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(10) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(11) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(11) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(12) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(12) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(13) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(13) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(14) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(14) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(15) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(15) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(16) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(16) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(17) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(17) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(18) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(18) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(19) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(19) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(20) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(20) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(21) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(21) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(22) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(22) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(23) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(23) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(24) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(24) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(25) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(25) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(26) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(26) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(27) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(27) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(28) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(28) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(29) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(29) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .select_article :nth-child(30) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .select_article :nth-child(30) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+@keyframes blur_off {
+  0% {
+    filter: blur(0.5vh);
+  }
+  100% {
+    filter: blur(0vh);
+  }
+}
+body main .blur_article {
+  z-index: 1;
+  position: absolute;
+  border: 1px solid blue;
+  width: 90vw;
+  height: 80vh;
+  left: 2vw;
+  top: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
+  filter: blur(0vh);
+  animation: blur_on 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes blur_on {
+  0% {
+    filter: blur(0vh);
+  }
+  100% {
+    filter: blur(0.5vh);
+  }
+}
+body main .blur_article :nth-child(1) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(1) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(2) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(2) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(3) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(3) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(4) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(4) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(5) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(5) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(6) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(6) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(7) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(7) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(8) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(8) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(9) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(9) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(10) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(10) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(11) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(11) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(12) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(12) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(13) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(13) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(14) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(14) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(15) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(15) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(16) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(16) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(17) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(17) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(18) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(18) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(19) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(19) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(20) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(20) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(21) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(21) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(22) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(22) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(23) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(23) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(24) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(24) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(25) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(25) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(26) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(26) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(27) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(27) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(28) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(28) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(29) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(29) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .blur_article :nth-child(30) {
+  width: 15vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body main .blur_article :nth-child(30) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+  border: 2px solid #000;
+}
+body main .off_selected_article {
+  visibility: hidden;
+}
+body main .selected_article {
+  visibility: hidden;
+}
+body main .selected_article .select_view {
+  z-index: 10;
+  position: absolute;
+  visibility: visible;
+  width: 80vw;
+  height: 80vh;
+  top: 10vh;
+  left: 10vw;
+  background: rgb(255, 255, 255);
+  border: 3px solid #000;
+  border-radius: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: on 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .selected_article .select_view .title {
+  width: 100%;
+  height: 15%;
+  padding: 3%;
+  font: 4vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .selected_article .select_view .tar {
+  width: 20%;
+  height: 30%;
+  font: 3vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .selected_article .select_view .target {
+  width: 80%;
+  height: 30%;
+  padding: 2%;
+  font: 3vh "jua";
+  display: flex;
+  align-items: center;
+}
+body main .selected_article .select_view .cont {
+  width: 20%;
+  height: 30%;
+  font: 3vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .selected_article .select_view .contents {
+  width: 80%;
+  height: 30%;
+  padding: 2%;
+  font: 3vh "jua";
+  display: flex;
+  align-items: center;
+}
+body main .selected_article .select_view .ht {
+  height: 25%;
+  width: 20%;
+  font: 3vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .selected_article .select_view .howto {
+  width: 80%;
+  height: 25%;
+  padding: 2%;
+  font: 3vh "jua";
+  display: flex;
+  align-items: center;
+}
+body main .selected_article .select_view .qz {
+  position: absolute;
+  visibility: hidden;
+}
+body main .off_back {
+  visibility: hidden;
+}
+body main .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+body main .off_x {
+  visibility: hidden;
+}
+body main .x {
+  cursor: pointer;
+  position: absolute;
+  z-index: 15;
+  border: 3px solid #000;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 4vh "Jua";
+  left: 88vw;
+  top: 8vh;
+  opacity: 0;
+  background: #fff;
+  animation: on 1s linear;
+  animation-fill-mode: forwards;
+}
+body main .off_home {
+  visibility: hidden;
+}
+body main .blur_home {
+  top: 80vh;
+  left: 86vw;
+  width: 10vw;
+  height: 10vh;
+  position: absolute;
+  font: 4vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5vh solid black;
+  background: rgba(255, 255, 255, 0.7);
+  filter: blur(0vh);
+  animation: blur_on 1s linear;
+  animation-fill-mode: forwards;
+}
+body main .home {
+  top: 80vh;
+  left: 86vw;
+  width: 10vw;
+  height: 10vh;
+  position: absolute;
+  font: 4vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5vh solid black;
+  background: rgba(255, 255, 255, 0.7);
+  filter: blur(0.5vh);
+  animation: blur_off 1s linear;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=finish_style.css.map */

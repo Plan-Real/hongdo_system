@@ -1,0 +1,2198 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #b1e1e2;
+}
+body .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 15;
+  background: #b1e1e2;
+  animation: container_apr 1.5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes container_apr {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .on_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 30;
+  background: #b1e1e2;
+  animation: container_apr2 1.5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes container_apr2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .off_container {
+  visibility: hidden;
+}
+body .select_article {
+  position: absolute;
+  visibility: hidden;
+  width: 80vw;
+  height: 80vh;
+  left: 2vw;
+  top: 6vh;
+  border: 1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .select_article :nth-child(1) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(1) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(2) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(2) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(3) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(3) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(4) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(4) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(5) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(5) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(6) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(6) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(7) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(7) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(8) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(8) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(9) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(9) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(10) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(10) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(11) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(11) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(12) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(12) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(13) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(13) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(14) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(14) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(15) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(15) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(16) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(16) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(17) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(17) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(18) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(18) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(19) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(19) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(20) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(20) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(21) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(21) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(22) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(22) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(23) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(23) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(24) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(24) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(25) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(25) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(26) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(26) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(27) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(27) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(28) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(28) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(29) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(29) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article :nth-child(30) {
+  width: 13vw;
+  height: 12vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+body .select_article :nth-child(30) .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #eee;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .select_article .select1 .title, body .select_article .select2 .title, body .select_article .select3 .title, body .select_article .select4 .title {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3vh "Jua";
+  background: #333;
+  border-radius: 3vh;
+  box-shadow: 3vh;
+}
+body .explain {
+  width: 20vw;
+  height: 30vh;
+  position: absolute;
+  right: 3vw;
+  top: 10vh;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 3.4vh "Jua";
+}
+body .initial {
+  width: 20vw;
+  height: 10vh;
+  position: absolute;
+  right: 3vw;
+  top: 55vh;
+  background: rgba(238, 115, 238, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+  font: 7vh "JUA";
+  cursor: pointer;
+}
+body .next {
+  width: 20vw;
+  height: 10vh;
+  position: absolute;
+  right: 3vw;
+  top: 70vh;
+  background: rgba(115, 238, 115, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+  font: 7vh "JUA";
+  cursor: pointer;
+}
+body .warning {
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  font: 10vh "jua";
+  background: #333;
+  color: rgb(237, 116, 136);
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .off_warning {
+  visibility: hidden;
+}
+body .off_explain, body .off_next, body .off_initial {
+  visibility: hidden;
+}
+body .selected_article {
+  visibility: hidden;
+}
+body .selected_article .select_view {
+  z-index: 10;
+  position: absolute;
+  visibility: visible;
+  width: 40vw;
+  height: 55vh;
+  top: 20vh;
+  left: 30vw;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+}
+body .selected_article .select_view .title {
+  width: 100%;
+  height: 15%;
+  padding: 3%;
+  font: 4vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .selected_article .select_view .tar {
+  width: 20%;
+  height: 30%;
+  font: 2vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .selected_article .select_view .target {
+  width: 80%;
+  height: 30%;
+  padding: 2%;
+  font: 2vh "jua";
+  display: flex;
+  align-items: center;
+}
+body .selected_article .select_view .cont {
+  width: 20%;
+  height: 30%;
+  font: 2vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .selected_article .select_view .contents {
+  width: 80%;
+  height: 30%;
+  padding: 2%;
+  font: 2vh "jua";
+  display: flex;
+  align-items: center;
+}
+body .selected_article .select_view .ht {
+  height: 25%;
+  width: 20%;
+  font: 2vh "jua";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .selected_article .select_view .howto {
+  width: 80%;
+  height: 25%;
+  padding: 2%;
+  font: 2vh "jua";
+  display: flex;
+  align-items: center;
+}
+body .selected_article .select_view .qz {
+  position: absolute;
+  visibility: hidden;
+}
+body .selected_article .select_hidden {
+  visibility: hidden;
+}
+body .selected_article .select_qz {
+  visibility: hidden;
+}
+body .selected_article .select_qz .qz {
+  z-index: 9;
+  visibility: visible;
+  position: absolute;
+  width: 60vw;
+  height: 50vh;
+  top: 25vh;
+  left: 20vw;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  animation: vanishIn 0.6s;
+  animation-fill-mode: forwards;
+}
+body .selected_article .select_qz .qz .q {
+  width: 100%;
+  height: 60%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 4vh "jua";
+  color: #222;
+}
+body .selected_article .select_qz .qz .answer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+}
+body .selected_article .select_qz .qz .answer :nth-child(1) {
+  z-index: 10;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font: 4vh "jua";
+  color: #333;
+}
+body .selected_article .select_qz .qz .answer :nth-child(2) {
+  z-index: 10;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font: 4vh "jua";
+  color: #333;
+}
+body .selected_article .select_out_qz {
+  visibility: hidden;
+}
+body .selected_article .select_out_qz .qz {
+  z-index: 9;
+  visibility: visible;
+  position: absolute;
+  width: 60vw;
+  height: 50vh;
+  top: 25vh;
+  left: 20vw;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  animation: vanishOut 0.6s;
+  animation-fill-mode: forwards;
+}
+body .selected_article .select_out_qz .qz .q {
+  width: 100%;
+  height: 60%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 4vh "jua";
+  color: #222;
+}
+body .selected_article .select_out_qz .qz .answer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+}
+body .selected_article .select_out_qz .qz .answer :nth-child(1) {
+  z-index: 10;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font: 4vh "jua";
+  color: #333;
+}
+body .selected_article .select_out_qz .qz .answer :nth-child(2) {
+  z-index: 10;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font: 4vh "jua";
+  color: #333;
+}
+body .selected_article .select_blur_qz {
+  visibility: hidden;
+}
+body .selected_article .select_blur_qz .qz {
+  filter: blur(1vh);
+  z-index: 1;
+  visibility: visible;
+  position: absolute;
+  width: 60vw;
+  height: 50vh;
+  top: 25vh;
+  left: 20vw;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+body .selected_article .select_blur_qz .qz .q {
+  width: 100%;
+  height: 60%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 4vh "jua";
+  color: #222;
+}
+body .selected_article .select_blur_qz .qz .answer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+}
+body .selected_article .select_blur_qz .qz .answer :nth-child(1) {
+  z-index: 10;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font: 4vh "jua";
+  color: #333;
+}
+body .selected_article .select_blur_qz .qz .answer :nth-child(2) {
+  z-index: 10;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font: 4vh "jua";
+  color: #333;
+}
+body .selected_article .off_select {
+  visibility: hidden;
+}
+body .off_game_skip {
+  visibility: hidden;
+}
+body .off {
+  visibility: hidden;
+}
+body .on {
+  width: 100%;
+  height: 100vh;
+}
+body .on .bg {
+  position: absolute;
+  width: 80vw;
+  height: 70vh;
+  top: 10vh;
+  left: 10vw;
+}
+body .on .bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .off_bg {
+  visibility: hidden;
+}
+body .on .off_black_bg {
+  visibility: hidden;
+}
+body .on .change_bg {
+  z-index: 10;
+  position: absolute;
+  width: 80vw;
+  height: 70vh;
+  top: 10vh;
+  left: 10vw;
+  background: rgb(0, 0, 0);
+  animation: black linear 3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes black {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .on .boundary {
+  position: absolute;
+  width: 80vw;
+  height: 70vh;
+  top: 10vh;
+  left: 10vw;
+  overflow: hidden;
+}
+body .on .boundary .in_hong2 {
+  top: 50%;
+  left: 30%;
+  position: absolute;
+  width: 12%;
+  height: 14%;
+  z-index: 10;
+  animation: do_in linear 4s;
+  animation-fill-mode: forwards;
+}
+@keyframes do_in {
+  0% {
+    left: 30%;
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  80% {
+    left: 52%;
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: 52%;
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+body .on .boundary .in_hong2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .hong2 {
+  top: 50%;
+  left: -12%;
+  position: absolute;
+  width: 12%;
+  height: 14%;
+  animation: appearing linear 4s;
+  animation-fill-mode: forwards;
+}
+@keyframes appearing {
+  0% {
+    top: 45%;
+    left: -12%;
+  }
+  20% {
+    top: 50%;
+    left: -3.6%;
+  }
+  40% {
+    top: 55%;
+    left: 4.8%;
+  }
+  60% {
+    top: 50%;
+    left: 13.2%;
+  }
+  80% {
+    top: 45%;
+    left: 21.6%;
+  }
+  100% {
+    top: 50%;
+    left: 30%;
+  }
+}
+body .on .boundary .hong2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .off_hong2 {
+  visibility: hidden;
+}
+body .on .boundary .game_announce {
+  top: 0%;
+  left: 0%;
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  height: 30%;
+  background: rgba(0, 0, 0, 0.3);
+  font: 5vh "jua";
+  color: rgb(202, 233, 125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: announce linear 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes announce {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .on .boundary .off_game_announce {
+  visibility: hidden;
+}
+body .on .boundary .off_portal {
+  visibility: hidden;
+}
+body .on .boundary .portal {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  width: 16%;
+  height: 24%;
+  z-index: 8;
+  opacity: 0;
+  animation: vanishIn 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .portal img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .bye_game_announce {
+  top: 0%;
+  left: 0%;
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  height: 30%;
+  background: rgba(0, 0, 0, 0.3);
+  font: 5vh "jua";
+  color: rgb(202, 233, 125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: vanishOut 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .bye_portal {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  width: 16%;
+  height: 24%;
+  z-index: 8;
+  opacity: 1;
+  animation: vanishOut 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .bye_portal img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .off_skill_book1 {
+  visibility: hidden;
+}
+body .on .boundary .skill_book1 {
+  z-index: 10;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 70%;
+  left: 60%;
+  animation: bounce ease-in 2s infinite;
+  cursor: pointer;
+}
+@keyframes bounce {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .on .boundary .skill_book1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .book1_announce {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  width: 20%;
+  height: 20%;
+  top: 5%;
+  left: 2%;
+  font: 2vh "jua";
+  color: rgb(202, 233, 125);
+}
+body .on .boundary .off_book1_announce {
+  visibility: hidden;
+}
+body .on .boundary .off_enemy_announce {
+  visibility: hidden;
+}
+body .on .boundary .enemy_announce {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  width: 20%;
+  height: 20%;
+  top: 5%;
+  left: 2%;
+  font: 2vh "jua";
+  color: rgb(202, 233, 125);
+}
+body .on .boundary .off_teacher {
+  visibility: hidden;
+}
+body .on .boundary .teacher {
+  width: 30%;
+  height: 40%;
+  top: 0%;
+  right: -110%;
+  position: absolute;
+  z-index: 10;
+  animation: teacher_appear linear 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes teacher_appear {
+  0% {
+    right: -110%;
+  }
+  100% {
+    right: -5%;
+  }
+}
+body .on .boundary .teacher .teacher_talk {
+  opacity: 1;
+  width: 60%;
+  height: 50%;
+  font: 3vh "jua";
+  background: rgba(255, 255, 255, 0.3);
+  top: 100%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+}
+body .on .boundary .teacher img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+body .on .boundary .off_teacher {
+  visibility: hidden;
+}
+body .on .boundary .tenor1, body .on .boundary .tenor2, body .on .boundary .tenor3, body .on .boundary .tenor4 {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .on .boundary .tenor1 img, body .on .boundary .tenor2 img, body .on .boundary .tenor3 img, body .on .boundary .tenor4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .off_tenor1, body .on .boundary .off_tenor2, body .on .boundary .off_tenor3, body .on .boundary .off_tenor4 {
+  visibility: hidden;
+}
+body .on .boundary .off_qz_intro {
+  visibility: hidden;
+}
+body .on .boundary .qz_intro {
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: 10%;
+  font: 35vh "jua";
+  opacity: 0;
+  color: antiquewhite;
+  animation: quiz_ 2s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+@keyframes quiz_ {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .on .boundary .off_cor {
+  visibility: hidden;
+}
+body .on .boundary .cor {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  font: 10vh "jua";
+  color: rgb(202, 233, 125);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ap1 4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes ap1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .on .boundary .off_wrg {
+  visibility: hidden;
+}
+body .on .boundary .wrg {
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  font: 10vh "jua";
+  color: red;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ap1 4s linear;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .off_skill_get {
+  visibility: hidden;
+}
+body .on .boundary .skill_get {
+  cursor: pointer;
+  z-index: 9;
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+  font: 10vh "jua";
+  background: rgb(202, 233, 125);
+  opacity: 0;
+  border-radius: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: vanishIn 1s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .off_whoRU {
+  visibility: hidden;
+}
+body .on .boundary .whoRU {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  left: -20%;
+  animation: enemy_moving ease-in-out 12s infinite;
+}
+@keyframes enemy_moving {
+  0% {
+    top: 50%;
+    left: -20%;
+  }
+  10% {
+    top: 50%;
+    left: 20%;
+  }
+  20% {
+    top: 40%;
+    left: 50%;
+  }
+  40% {
+    top: 60%;
+    left: 80%;
+  }
+  50% {
+    top: 50%;
+    left: 120%;
+  }
+  60% {
+    top: 60%;
+    left: 80%;
+  }
+  70% {
+    top: 50%;
+    left: 30%;
+  }
+  80% {
+    top: 40%;
+    left: 50%;
+  }
+  100% {
+    top: 50%;
+    left: -20%;
+  }
+}
+body .on .boundary .whoRU img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .off_back_hong2 {
+  visibility: hidden;
+}
+body .on .boundary .back_hong2 {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  left: -40%;
+  top: 40%;
+  transform: rotateY(180deg);
+  animation: hong2_come 2s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes hong2_come {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+body .on .boundary .back_hong2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .back_hong2_gojung {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  left: 10%;
+  top: 40%;
+  transform: rotateY(180deg);
+}
+body .on .boundary .back_hong2_gojung img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .back_hong2_attack {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  left: 10%;
+  top: 40%;
+  transform: rotateY(180deg);
+  animation: hong2_attack 0.5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes hong2_attack {
+  0% {
+    left: 10%;
+  }
+  50% {
+    left: 5%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+body .on .boundary .back_hong2_attack img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .off_monster1 {
+  visibility: hidden;
+}
+body .on .boundary .monster1 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 0%;
+  right: -30%;
+  opacity: 1;
+  animation: monster_come 2s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes monster_come {
+  0% {
+    right: -30%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes disappear {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(500vh);
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+body .on .boundary .monster1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .bye_monster1 {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 0%;
+  right: 0%;
+  opacity: 1;
+  animation: disappear 2s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes disappear {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(5vh);
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+body .on .boundary .bye_monster1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .on .boundary .off_skill_announce {
+  visibility: hidden;
+}
+body .on .boundary .skill_announce {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  width: 20%;
+  height: 20%;
+  top: 5%;
+  left: 2%;
+  font: 2vh "jua";
+  color: rgb(202, 233, 125);
+}
+body .on .boundary .game_skip {
+  cursor: pointer;
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  left: 2%;
+  top: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f48f4c;
+  border-radius: 3vh;
+  font: 3vh "jua";
+}
+body .on .boundary .off_game_skip {
+  visibility: hidden;
+}
+body .on .boundary .bye_game_skip {
+  cursor: pointer;
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  left: 2%;
+  top: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f48f4c;
+  border-radius: 3vh;
+  font: 3vh "jua";
+  opacity: 1;
+  animation: fadeout 1s linear;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .bye_skill_announce {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  width: 20%;
+  height: 20%;
+  top: 5%;
+  left: 2%;
+  font: 2vh "jua";
+  color: rgb(202, 233, 125);
+  animation: fadeout 1s linear;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .bye_skill_list {
+  position: absolute;
+  z-index: 5;
+  width: 40%;
+  height: 40%;
+  bottom: 0%;
+  right: 0%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  filter: blur(2vh);
+  animation: fadeout 1s linear;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .skill_list {
+  position: absolute;
+  z-index: 5;
+  width: 40%;
+  height: 40%;
+  bottom: 0%;
+  right: 0%;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  animation: puffIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .skill_list .skill1, body .on .boundary .skill_list .skill2, body .on .boundary .skill_list .skill3, body .on .boundary .skill_list .skill4 {
+  z-index: 3;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+body .on .boundary .skill_list .skill1_active {
+  cursor: pointer;
+  z-index: 10;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  font: 4vh "jua";
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .on .boundary .skill_list .skill2_active {
+  cursor: pointer;
+  z-index: 10;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  font: 4vh "jua";
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .on .boundary .skill_list .skill3_active {
+  cursor: pointer;
+  z-index: 10;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  font: 4vh "jua";
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .on .boundary .skill_list .skill4_active {
+  cursor: pointer;
+  z-index: 10;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  font: 4vh "jua";
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .on .boundary .off_brush {
+  visibility: hidden;
+}
+body .on .boundary .brush {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  opacity: 0;
+  left: 28%;
+  top: 65%;
+  transform: rotateZ(270deg);
+  animation: brush_throw 4s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+@keyframes brush_throw {
+  0% {
+    opacity: 0;
+    left: 28%;
+    top: 65%;
+    transform: rotateZ(270deg);
+  }
+  20% {
+    opacity: 1;
+    left: 28%;
+    top: 65%;
+    transform: rotateZ(270deg);
+  }
+  80% {
+    z-index: 10;
+    opacity: 1;
+    left: 75%;
+    top: 15%;
+    transform: rotateZ(2700deg);
+  }
+  100% {
+    z-index: 10;
+    opacity: 0;
+    left: 75%;
+    top: 15%;
+    transform: rotateZ(2700deg);
+  }
+}
+body .on .boundary .brush img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+body .on .boundary .off_clear_announce, body .on .boundary .off_clear_announce2, body .on .boundary .off_clear_announce3, body .on .boundary .off_clear_announce4 {
+  visibility: hidden;
+}
+body .on .boundary .clear_announce {
+  z-index: 9;
+  cursor: pointer;
+  position: absolute;
+  width: 20%;
+  height: 25%;
+  top: 37.5%;
+  left: 40%;
+  font: 8vh "Jua";
+  border-radius: 10vh;
+  border: 2vh solid gold;
+  color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+  animation: clearing 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+@keyframes clearing {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 0;
+  }
+  80% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(720deg);
+    opacity: 1;
+  }
+}
+body .on .boundary .off_stage2_go {
+  visibility: hidden;
+}
+body .on .boundary .stage2_go {
+  position: absolute;
+  width: 50%;
+  height: 20%;
+  top: 65%;
+  left: 25%;
+  font: 5vh "Jua";
+  color: gold;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadein 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+body .on .boundary .off_blur_bg {
+  visibility: hidden;
+}
+body .on .boundary .blur_bg {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  filter: blur(5vh);
+  position: absolute;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  animation: fadein 1s linear;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .off_metor1, body .on .boundary .off_metor2 {
+  visibility: hidden;
+}
+body .on .boundary .metor1 {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .on .boundary .metor1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .metor2 {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  opacity: 1;
+  animation: fadeout 1.5s linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .metor2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .off_th1, body .on .boundary .off_th2, body .on .boundary .off_th3 {
+  visibility: hidden;
+}
+body .on .boundary .th1, body .on .boundary .th2 {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .on .boundary .th1 img, body .on .boundary .th2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .th3 {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  opacity: 1;
+  animation: fadeout 2s linear;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .th3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .off_dr1, body .on .boundary .off_dr2, body .on .boundary .off_dr3, body .on .boundary .off_dr4 {
+  visibility: hidden;
+}
+body .on .boundary .dr1, body .on .boundary .dr2, body .on .boundary .dr3 {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .on .boundary .dr1 img, body .on .boundary .dr2 img, body .on .boundary .dr3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .dr4 {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  opacity: 1;
+  animation: fadeout 1.5s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .dr4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .on .boundary .off_change_gif {
+  visibility: hidden;
+}
+body .on .boundary .change_gif {
+  z-index: 20;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  animation: black2 linear 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes black2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .on .boundary .off_finish {
+  visibility: hidden;
+}
+body .on .boundary .finish {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 15;
+}
+body .on .boundary .finish .fin_announce {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  left: 10%;
+  top: 10%;
+  font: 7vh "jua";
+  color: #b1e1e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadein 2s linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .finish .go_next {
+  cursor: pointer;
+  width: 30%;
+  height: 20%;
+  font: 3vh "jua";
+  top: 55%;
+  left: 35%;
+  position: absolute;
+  background: #c4ee86;
+  border-radius: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadein 2s linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .off_realBye {
+  visibility: hidden;
+}
+body .on .boundary .realBye {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 31;
+  opacity: 0;
+  animation: fadein 0.5s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .realBye .realByeQ {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  font: 7vh "jua";
+  color: #000;
+  justify-content: center;
+  align-items: center;
+}
+body .on .boundary .realBye .realY, body .on .boundary .realBye .realN {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 4vh "jua";
+}
+body .on .boundary .realBye .realY {
+  background: rgba(245, 138, 163, 0.3);
+}
+body .on .boundary .realBye .realN {
+  background: rgba(186, 210, 109, 0.3);
+}
+body .on .boundary .bye_realBye {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 31;
+  opacity: 1;
+  animation: fadeout 0.5s;
+  animation-fill-mode: forwards;
+}
+body .on .boundary .bye_realBye .realByeQ {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  font: 7vh "jua";
+  color: #000;
+  justify-content: center;
+  align-items: center;
+}
+body .on .boundary .bye_realBye .realY, body .on .boundary .bye_realBye .realN {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 4vh "jua";
+}
+body .on .boundary .bye_realBye .realY {
+  background: rgba(245, 138, 163, 0.3);
+}
+body .on .boundary .bye_realBye .realN {
+  background: rgba(186, 210, 109, 0.3);
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(90px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+@keyframes vanishOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(20px);
+  }
+}
+@keyframes puffIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+
+/*# sourceMappingURL=game_style.css.map */

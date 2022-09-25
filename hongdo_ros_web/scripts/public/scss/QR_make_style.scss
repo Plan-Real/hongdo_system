@@ -1,0 +1,94 @@
+@charset "UFT-8";
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  main {
+    width: 100%;
+    height: 100%;
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+      }
+    }
+
+    .txt {
+      width: 30vw;
+      height: 5vh;
+      position: absolute;
+      top: 30vh;
+      left: 43vw;
+      font: 5vh "Nanum Brush Script";
+
+      span {
+        position: relative;
+        animation: anime_textup 2s infinite;
+      }
+
+      :nth-of-type(1) {
+        animation-delay: 0.2s;
+      }
+      :nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      :nth-of-type(3) {
+        animation-delay: .6s;
+      }
+      :nth-of-type(4) {
+        animation-delay: .8s;
+      }
+      :nth-of-type(5) {
+        animation-delay: 1s;
+      }
+      :nth-of-type(6) {
+        animation-delay: 1.2s;
+      }
+      :nth-of-type(7) {
+        animation-delay: 1.4s;
+      }
+      :nth-of-type(8) {
+        animation-delay: 1.6s;
+      }
+      :nth-of-type(9) {
+        animation-delay: 1.8s;
+      }
+      :nth-of-type(10) {
+        animation-delay: 2s;
+      }
+    }
+
+    @keyframes anime_textup {
+      0% { top: 0vh;} 
+      10% { top: -0.2rem; } 
+      20% { top: 0vh; }
+      100% { top: 0vh; } 
+    }
+
+    .drawing {
+      width: 30vw;
+      height: 30vw;
+      position: absolute;
+      top: 30vh;
+      left: 35vw;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

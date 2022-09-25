@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body main {
+  width: 100%;
+  height: 100%;
+}
+body main .bg {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+body main .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .deco1 {
+  width: 50vw;
+  height: 100vh;
+  top: -100vh;
+  left: -10vw;
+  position: absolute;
+  animation: deco_move 0.8s ease-in;
+  animation-fill-mode: forwards;
+}
+body main .deco1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body main .deco2 {
+  width: 50vw;
+  height: 100vh;
+  top: -100vh;
+  left: 60vw;
+  position: absolute;
+  animation: deco_move 0.8s ease-in;
+  animation-fill-mode: forwards;
+}
+body main .deco2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@keyframes deco_move {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes big {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body main .camera_btn {
+  width: 28vw;
+  height: 30vh;
+  top: 34vh;
+  left: 35vw;
+  position: absolute;
+  opacity: 0;
+  animation: fadein 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+body main .camera_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body main .camera_btn .txt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 7vh "Nanum Brush Script";
+  top: 2vh;
+  left: 1vw;
+}
+body main .camera_btn_click {
+  width: 28vw;
+  height: 30vh;
+  top: 34vh;
+  left: 35vw;
+  position: absolute;
+  animation: big 0.5s linear;
+  animation-fill-mode: forwards;
+}
+body main .camera_btn_click img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body main .camera_btn_click .txt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 7vh "Nanum Brush Script";
+  top: 2vh;
+  left: 1vw;
+}
+body main .off_duru {
+  visibility: hidden;
+}
+body main .duru {
+  width: 44vw;
+  height: 95vh;
+  left: 28vw;
+  top: 0vh;
+  position: absolute;
+  overflow: hidden;
+}
+body main .duru .duru2 {
+  width: 100%;
+  top: 0px;
+  height: 103%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+body main .duru .duru2 img {
+  width: 44vw;
+  height: 99vh;
+  object-fit: cover;
+}
+body main .duru .duru2 .display {
+  z-index: 3;
+  position: absolute;
+  top: 8vh;
+  left: 2.6vw;
+  width: 38.9vw;
+  height: 38.9vw;
+  overflow: hidden;
+  border: 5px solid rgb(49, 37, 21);
+}
+body main .duru .duru2 .display video {
+  position: absolute;
+  transform: scaleX(-1);
+  width: 68.4vw;
+  height: 38.5vw;
+  left: -14.95vw;
+  top: 0vh;
+  object-fit: fill;
+}
+body main .duru .duru1 {
+  width: 100%;
+  height: 5vh;
+  top: 0vh;
+  left: 0%;
+  position: absolute;
+  z-index: 3;
+  animation: duru1_move linear 1s;
+  animation-fill-mode: forwards;
+  filter: blur(0.5vh);
+}
+@keyframes duru1_move {
+  0% {
+    top: 0vh;
+  }
+  100% {
+    top: 90vh;
+    filter: blur(0vh);
+  }
+}
+body main .duru .duru1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .duru .bg3 {
+  width: 100%;
+  height: 95vh;
+  top: 5vh;
+  left: 0%;
+  position: absolute;
+  z-index: 3;
+  animation: duru3_move linear 1s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+body main .duru .bg3 .img_bg {
+  width: 100vw;
+  height: 100vh;
+  top: -5vh;
+  left: -28vw;
+  position: absolute;
+  object-fit: fill;
+  animation: bg_move linear 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bg_move {
+  0% {
+    top: -5vh;
+    left: -28vw;
+  }
+  100% {
+    top: -95vh;
+    left: -28vw;
+  }
+}
+@keyframes duru3_move {
+  0% {
+    top: 5vh;
+    height: 95vh;
+  }
+  100% {
+    top: 95vh;
+    height: 0vh;
+  }
+}
+body main .off_announce_1 {
+  visibility: hidden;
+}
+body main .announce_1 {
+  width: 40vw;
+  height: 14vh;
+  opacity: 0.9;
+  left: 30vw;
+  top: 75vh;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  animation: fadein 0.5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+body main .announce_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .announce_1 .txt1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 6.2vh "Nanum Brush Script";
+  position: absolute;
+  top: -1.3vh;
+  left: 0px;
+  color: #fff;
+}
+body main .off_announce_2 {
+  visibility: hidden;
+}
+body main .announce_2 {
+  width: 60vw;
+  height: 12vh;
+  left: 20vw;
+  top: 75vh;
+  position: absolute;
+  z-index: 5;
+  animation: fadein 0.5s linear;
+  animation-fill-mode: forwards;
+}
+body main .announce_2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body main .announce_2 .txt2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 5vh "Nanum Brush Script";
+  position: absolute;
+  top: -0.5vh;
+  left: 0px;
+  color: #fff;
+}
+@keyframes boingInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(-90deg);
+    transform: perspective(800px) rotateX(-90deg);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(50deg);
+    transform: perspective(800px) rotateX(50deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(0deg);
+    transform: perspective(800px) rotateX(0deg);
+  }
+}
+body main *, body main *:before, body main *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body main body {
+  background: #32386D;
+  font-family: Helvetica, Arial, sans-serif;
+}
+body main .demo {
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 140px;
+  margin-top: -70px;
+  padding: 10px;
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+body main .demo .demo__colored-blocks {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  margin-left: -250px;
+  padding: 10px;
+  border-radius: 20px;
+  perspective: 1000px;
+  animation: demoAnim 4s ease-in-out, contAnim 4s;
+}
+body main .demo .demo__colored-blocks .demo__colored-blocks-rotater {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  animation: rotation 1.3s linear infinite;
+}
+body main .demo .demo__colored-blocks .demo__colored-blocks-inner {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  background: #32386D;
+  border-radius: inherit;
+}
+body main .demo .demo__colored-block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  height: 300%;
+  transform-origin: 0 0;
+}
+body main .demo .demo__colored-block:nth-child(1) {
+  transform: rotate(0deg) skewX(-30deg);
+  background-color: #FD3359;
+}
+body main .demo .demo__colored-block:nth-child(2) {
+  transform: rotate(120deg) skewX(-30deg);
+  background-color: #F4D302;
+}
+body main .demo .demo__colored-block:nth-child(3) {
+  transform: rotate(240deg) skewX(-30deg);
+  background-color: #21BDFF;
+}
+body main .demo .demo__inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body main .demo .demo__numbers {
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+body main .demo .demo__numbers .demo__numbers-path {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 0, 518.055065155;
+  stroke-dashoffset: 0;
+  animation: numAnim 4s ease-in-out infinite;
+  opacity: 0;
+}
+body main .demo .demo__text {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  margin-left: -250px;
+  text-align: center;
+  line-height: 140px;
+  font-size: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  transform: translateX(10px);
+  animation: hideText 4s infinite;
+}
+body main .dem {
+  visibility: hidden;
+}
+@keyframes contAnim {
+  15%, 100% {
+    margin-left: -250px;
+    width: 500px;
+  }
+  25%, 90% {
+    margin-left: -70px;
+    width: 140px;
+  }
+}
+@keyframes numAnim {
+  15% {
+    stroke-dasharray: 0, 518.055065155;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  25%, 41% {
+    opacity: 1;
+    stroke-dasharray: 144.4256591797, 518.055065155;
+    stroke-dashoffset: -40;
+  }
+  53%, 66% {
+    stroke-dasharray: 136.0216217041, 518.055065155;
+    stroke-dashoffset: -227.238697052;
+  }
+  76% {
+    stroke-dasharray: 113.4751205444, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  88%, 100% {
+    stroke-dasharray: 72.1554946899, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes demoAnim {
+  15% {
+    border-radius: 20px;
+    transform: rotate(0);
+  }
+  30%, 43% {
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+  52%, 65% {
+    border-radius: 0;
+    transform: rotate(720deg);
+  }
+  78%, 90% {
+    border-radius: 50%;
+    transform: rotate(1080deg);
+  }
+  100% {
+    border-radius: 20px;
+    transform: rotate(1440deg);
+  }
+}
+@keyframes hideText {
+  15%, 100% {
+    opacity: 1;
+  }
+  20%, 96% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=upload_style.css.map */

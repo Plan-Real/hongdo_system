@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>hongdo_ros_web</name>
+    <version>0.0.0</version>
+    <description>
+        The hongdo robot web
+    </description>
+    <maintainer email="jeonghan@todo.todo">jeonghan</maintainer>
+    <license>TODO</license>
+    <buildtool_depend>catkin</buildtool_depend>
+</package>

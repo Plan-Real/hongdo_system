@@ -1,0 +1,15 @@
+#python 관련
+
+*.pyc
+__pycache__/
+
+#picutre
+scripts/public/hongdo_AI/input/
+scripts/public/hongdo_AI/output/
+scripts/public/hongdo_AI/backup_origin/
+
+#vscode
+.vscode/
+
+#node_modules
+node_modules/
