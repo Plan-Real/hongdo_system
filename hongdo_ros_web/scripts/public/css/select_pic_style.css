@@ -86,6 +86,23 @@ body main .duru .duru2 .display img {
   top: 0vh;
   object-fit: contain;
 }
+body main .duru .duru2 .camera_bg {
+  z-index: 3;
+  position: absolute;
+  top: 8vh;
+  left: 2.8vw;
+  width: 38.5vw;
+  height: 38.5vw;
+  overflow: hidden;
+}
+body main .duru .duru2 .camera_bg img {
+  position: absolute;
+  width: 68.4vw;
+  height: 38.5vw;
+  left: -14.95vw;
+  top: 0vh;
+  object-fit: contain;
+}
 body main .duru .duru1 {
   width: 100%;
   height: 5vh;
