@@ -41,6 +41,15 @@ _no.addEventListener("click",e=>{
     location.replace("intro.html");
 });
 
+const skip = document.getElementById("skip");
+skip.addEventListener("click", e=>{
+    skip.className = "skip_click";
+
+    setTimeout(()=>{
+        location.replace("upload.html")
+    },1000);
+});
+
 const btn_home = document.getElementById("btn_home");
 
 var go_home = 0;

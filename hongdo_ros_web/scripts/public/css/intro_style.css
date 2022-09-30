@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=East+Sea+Dokdo:400");
 * {
   margin: 0px;
   padding: 0px;
@@ -33,6 +34,36 @@ body main {
   width: 100%;
   height: 100%;
 }
+body main .title {
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  color: #000;
+  font: 28vh "East Sea Dokdo";
+  z-index: 5;
+}
+body main .title .a1 {
+  width: 100%;
+  height: 100%;
+  bottom: 13vh;
+  right: 8vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .title .a2 {
+  width: 100%;
+  height: 100%;
+  top: 8vh;
+  left: 5vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body main .intro {
   width: 100%;
   height: 100%;
@@ -50,14 +81,14 @@ body main .text {
   width: 80vw;
   height: 20vh;
   left: 10vw;
-  top: 60vh;
+  top: 67vh;
   z-index: 3;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Noto Sans KR", sans-serif;
-  color: #fff;
+  color: #000;
 }
 body main .click {
   width: 80vw;
@@ -70,7 +101,7 @@ body main .click {
   align-items: center;
   justify-content: center;
   font: 7vh "Nanum Brush Script";
-  color: #fff;
+  color: #000;
   animation: fadein_out 3s ease-in-out infinite;
 }
 body main .click_bg {
