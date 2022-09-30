@@ -30,7 +30,7 @@ const path = require('path');
 const imgbbUploader = require("imgbb-uploader")
 const fs = require('fs');
 const url = require('url');
-const port = 5000;
+const port = 5050;
 // Requrotires the std_msgs message package
 // const std_msgs = rosnodejs.require('std_msgs').msg;
 

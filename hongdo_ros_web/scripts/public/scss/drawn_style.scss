@@ -64,6 +64,21 @@ body {
               object-fit: contain;
             }
           }
+
+          .camera_bg {
+            width: 86%;
+            left: 7%;
+            height: 80%;
+            top: 6%;
+            position: absolute;
+            z-index: 4;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
       }
 
       .duru1 {
