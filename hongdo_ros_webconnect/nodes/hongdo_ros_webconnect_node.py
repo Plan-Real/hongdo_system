@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import string
+from ctypes import sizeof
 import cv2
 import rospy
 import rospkg
@@ -26,6 +26,9 @@ class Qrmake():
 
     def url_connect(self, req):
         rospy.loginfo("Node is making QR")
+        if(req.url[0]=='"'):
+            url_message=req.url.split('"')
+            req.url=url_message[1]
         rospy.loginfo("Returning : " + req.url)
         hongdo_img = Image.open(self._character_path) 
         #character image open
@@ -169,7 +172,7 @@ class hongdorosWebconnectNode:
         rospy.Service('/mix_pic', Trigger, self.image_mix.image_mix)
 
         # self.opencvStart()
-        rospy.loginfo('Ready to capture order')
+        rospy.loginfo('Ready webconnect Node')
         rospy.on_shutdown(self.__del__)
 
     def main(self):

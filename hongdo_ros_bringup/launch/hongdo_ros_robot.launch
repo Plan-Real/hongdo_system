@@ -8,14 +8,14 @@
 
   <!-- motor -->
 
-  <!-- <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_motor.launch">
+  <include file="$(find hongdo_ros_bringup)/launch/hongdo_ros_motor.launch">
     <arg name="set_port" value="$(arg set_port_motor)"/>
-  </include> -->
+  </include>
  
   <!-- dynamixel -->
 
-  <!-- <include file='$(find dynamixel_workbench_operators)/launch/hongdo_ros_joint_operator.launch'/>
-  <include file='$(find dynamixel_workbench_controllers)/launch/hongdo_ros_dynamixel_controllers.launch'/> -->
+  <include file='$(find dynamixel_workbench_operators)/launch/hongdo_ros_joint_operator.launch'/>
+  <include file='$(find dynamixel_workbench_controllers)/launch/hongdo_ros_dynamixel_controllers.launch'/>
 
   <!-- lidar 
   ->
@@ -27,7 +27,7 @@
 
   <!--obstacle cluster detect  -->
 
-  <!-- <include file='$(find hongdo_ros_obstacle)/launch/hongdo_ros_obstacle.launch'/> -->
+  <include file='$(find hongdo_ros_obstacle)/launch/hongdo_ros_obstacle.launch'/>
   
   <!-- web node -->
   
