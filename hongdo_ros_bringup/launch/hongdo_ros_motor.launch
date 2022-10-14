@@ -1,7 +1,7 @@
 <launch>
   <arg name="set_port" default="/dev/ttyMotor"/>  
   <arg name="set_odom_mode" default="wheel_only"/>
-  <node pkg="hongdo_ros_bringup" type="hongdo_ros_motor_r1v2_node.py" name="hongdo_ros_motor_node" output="screen">
+  <node pkg="hongdo_ros_bringup" type="hongdo_ros_motor_r1v2_node.py" name="hongdo_ros_motor_node">
       <param name="port" value="$(arg set_port)"/>
       <param name="baud" value="115200"/>
       <param name="odom_mode" value="$(arg set_odom_mode)"/>

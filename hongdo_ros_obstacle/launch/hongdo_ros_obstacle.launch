@@ -1,5 +1,5 @@
 <launch>
-  <node name="ydlidar_lidar_publisher"  pkg="hongdo_ros_obstacle"  type="hongdo_ros_obstacle_node" output="screen" respawn="false" >
+  <node name="ydlidar_lidar_publisher"  pkg="hongdo_ros_obstacle"  type="hongdo_ros_obstacle_node" respawn="false" >
     <!-- string property -->
     <param name="port"         type="string" value="/dev/ydlidar"/>  
     <param name="frame_id"     type="string" value="laser_frame"/>
@@ -34,5 +34,5 @@
   </node>
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser4"
     args="0.0 0.0 0.2 0.0 0.0 0.0 /base_footprint /laser_frame 40" />
-  <node name="laser_scan" pkg="hongdo_ros_obstacle" type="obstacle.py" output="screen"/>
+  <node name="laser_scan" pkg="hongdo_ros_obstacle" type="obstacle.py"/>
 </launch>

@@ -119,7 +119,7 @@ if (require.main === module) {
 
 
   app.get('/loading.html', (req,res) =>{
-    // handshake_service();
+    handshake_service();
     // drawing motion 
 
 
