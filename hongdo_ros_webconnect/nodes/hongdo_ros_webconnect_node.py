@@ -69,6 +69,7 @@ class OpencvWebcam():
                 frame = self.cutting(frame)
                 if ret:
                     cv2.imshow('camera',frame)          # 프레임 화면에 표시
+                    frame = cv2.flip(frame, 1)
                     cv2.imwrite(self._save_path+'/{0}.png'.format(self._number), frame) # 프레임을 'photo.jpg'에 저장
                     cv2.imwrite(self._AI_path+'/model.png', frame)
                     # result_image = Image_add.Image_add(self._frontground_path,frame)
