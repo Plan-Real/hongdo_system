@@ -58,20 +58,12 @@ def display_facial_landmarks(
     )
     pred_type = collections.namedtuple('prediction_type', ['slice', 'color'])
     pred_types = {
-        'face': pred_type(slice(0, 17), (0.682, 0.780, 0.909, 0.5)),
-        'eyebrow1': pred_type(slice(17, 22), (1.0, 0.498, 0.055, 0.4)),
-        'eyebrow2': pred_type(slice(22, 27), (1.0, 0.498, 0.055, 0.4)),
-        'nose': pred_type(slice(27, 31), (0.345, 0.239, 0.443, 0.4)),
-        'nostril': pred_type(slice(31, 36), (0.345, 0.239, 0.443, 0.4)),
-        'eye1': pred_type(slice(36, 42), (0.596, 0.875, 0.541, 0.3)),
-        'eye2': pred_type(slice(42, 48), (0.596, 0.875, 0.541, 0.3)),
-        'lips': pred_type(slice(48, 60), (0.596, 0.875, 0.541, 0.3)),
-        'teeth': pred_type(slice(60, 68), (0.596, 0.875, 0.541, 0.4))
+        'face': pred_type(slice(0, 17), (0.596, 0.875, 0.541, 0.3)),
     }
 
     fig = plt.figure(figsize=fig_size)
     ax = fig.add_subplot(1, 1, 1)
-    # ax.imshow(img)
+    ax.imshow(img)
     ax.axis('off')
 
     for face in landmarks:
@@ -81,6 +73,7 @@ def display_facial_landmarks(
                 face[pred_type.slice, 1],
                 color=pred_type.color, **plot_style
             )
+    plt.savefig(os.path.join(_pr_dirpath+"/input",'face_detect_model.png'))
     # plt.show()
 
 def align_and_crop_face(
@@ -161,6 +154,8 @@ def align_and_crop_face(
         img = img.resize((output_size, output_size), PIL.Image.ANTIALIAS)
 
     return img
+
+
 _pr_dirpath = fileRoot.pr_dirpath
 img = Image.open(_pr_dirpath + '/input/model.png').convert("RGB")
 
@@ -171,6 +166,7 @@ display_facial_landmarks(img, landmarks, fig_size=[5, 5])
 for landmark in landmarks:
     face = align_and_crop_face(img, landmark, expand=1.3)
     # display(face2paint(model=model, img=face, size=512))
-    img2 = face2paint(model=model, img=face, size=512)
+
+    img2 = face2paint(model=model, img=face, size=615)
 
 img2.save(os.path.join(_pr_dirpath+"/output",'trained_model.png'))

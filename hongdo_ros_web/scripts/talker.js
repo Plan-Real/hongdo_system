@@ -143,6 +143,8 @@ if (require.main === module) {
     res.sendFile(__dirname+'/loading.html');
   })
 
+  var response_url;
+
   app.get('/QR_make.html', (req,res) => {
     res.sendFile(__dirname+'/QR_make.html');
     imgbbUploader("e4422a3845100fe670775736ffd0e7cb", '/home/jeonghan/catkin_ws/src/hongdo_ros/hongdo_ros_web/scripts/public/hongdo_AI/output/trained_model.png'). then((response)=> {
@@ -150,13 +152,14 @@ if (require.main === module) {
       //   return res.redirect("/drawn.html");
       // }
 
-      url_service(JSON.stringify(response.url))
+      response_url = response;
     }
       // console.log(JSON.stringify(response.url))
     )
     .catch((error) => 
       console.error(error)
     );
+    url_service(JSON.stringify(response_url.url))
     
   })
 
