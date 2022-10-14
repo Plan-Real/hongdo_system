@@ -33,6 +33,7 @@ const port = 5000;
 const {exec} = require("child_process");
 const { url } = require('inspector');
 const { response } = require('express');
+var spawn = require("child_process").spawn('python3', [__dirname , '/public/hongdo_AI/cartoon_AI/face_detect.py']);
 // Requrotires the std_msgs message package
 
 
@@ -109,10 +110,9 @@ if (require.main === module) {
     res.sendFile(__dirname+'/taking_pic.html');
     opnecv_capture();
     //사진 저장 후 경로 public/hongdo_AI/input  파일명 : model.jpg
-    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py',async(err, stdout, stderr) => {
-      if(err) console.error(err)
-      console.log(stdout)
-    }) 
+    spawn.on('exit',function(code,signal){
+      console.log('exit: ');
+   });
   })
 
 
