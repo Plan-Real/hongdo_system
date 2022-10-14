@@ -80,10 +80,6 @@ if (require.main === module) {
 
   app.get('/intro.html', (req,res) =>{
     res.sendFile(__dirname+'/intro.html');  
-    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py',async(err, stdout, stderr) => {
-      if(err) console.error(err)
-      console.log(stdout)
-    })
   })
 
   app.get('/select_effect.html', (req,res) =>{
@@ -113,7 +109,10 @@ if (require.main === module) {
     res.sendFile(__dirname+'/taking_pic.html');
     opnecv_capture();
     //사진 저장 후 경로 public/hongdo_AI/input  파일명 : model.jpg
-    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py');
+
+    const timeout = setTimeout(()=>{
+      exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py');
+    },500);
   })
 
 
@@ -127,8 +126,10 @@ if (require.main === module) {
     // drawing motion 
 
 
-    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py')
-    mix_image();
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py', (err, stdout, stderr)=>{
+      mix_image();
+    });
+    
     // simple AI
 
 
@@ -149,16 +150,14 @@ if (require.main === module) {
     res.sendFile(__dirname+'/loading.html');
   })
 
-  var response_url;
-
   app.get('/QR_make.html', (req,res) => {
     res.sendFile(__dirname+'/QR_make.html');
-    imgbbUploader("e4422a3845100fe670775736ffd0e7cb", __dirname+'/public/hongdo_AI/output/mix_model.png'), (response)=> {
-      // if( url_service(JSON.stringify(response.url)) == true ) {
-      //   return res.redirect("/drawn.html");
-      // }
+    // imgbbUploader("e4422a3845100fe670775736ffd0e7cb", __dirname+'/public/hongdo_AI/output/mix_model.png', response=>{
+    //   url_service(JSON.stringify(response.url))
+    // })
+    imgbbUploader("e4422a3845100fe670775736ffd0e7cb", __dirname+'/public/hongdo_AI/output/mix_model.png').then((response) =>{
       url_service(JSON.stringify(response.url))
-    }
+    });
   })
 
 
