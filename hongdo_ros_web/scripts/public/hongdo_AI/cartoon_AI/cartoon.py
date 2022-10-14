@@ -22,8 +22,8 @@ class fileRoot(object):
     dirpath = os.path.dirname(file_abspath)
     pr_dirpath = os.path.dirname(dirpath)
 
-def get_dlib_face_detector(predictor_path: str = "shape_predictor_68_face_landmarks.dat"):
-
+def get_dlib_face_detector():
+    predictor_path = os.path.join(_pr_dirpath+"/cartoon_AI/shape_predictor_68_face_landmarks.dat")
     if not os.path.isfile(predictor_path):
         model_file = "shape_predictor_68_face_landmarks.dat.bz2"
         os.system(f"wget http://dlib.net/files/{model_file}")

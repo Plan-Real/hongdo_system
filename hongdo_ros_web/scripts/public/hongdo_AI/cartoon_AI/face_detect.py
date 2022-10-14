@@ -21,9 +21,10 @@ class fileRoot(object):
     file_abspath = os.path.abspath(__file__)
     dirpath = os.path.dirname(file_abspath)
     pr_dirpath = os.path.dirname(dirpath)
+    
 
-def get_dlib_face_detector(predictor_path: str = "shape_predictor_68_face_landmarks.dat"):
-
+def get_dlib_face_detector():
+    predictor_path = os.path.join(_pr_dirpath+"/cartoon_AI/shape_predictor_68_face_landmarks.dat")
     if not os.path.isfile(predictor_path):
         model_file = "shape_predictor_68_face_landmarks.dat.bz2"
         os.system(f"wget http://dlib.net/files/{model_file}")
@@ -73,7 +74,8 @@ def display_facial_landmarks(
                 face[pred_type.slice, 1],
                 color=pred_type.color, **plot_style
             )
-    plt.savefig(os.path.join(_pr_dirpath+"/input",'face_detect_model.png'))
+    print(ax)
+    plt.savefig(os.path.join(_pr_dirpath+"/input",'face_detect_model.png'), bbox_inches='tight', pad_inches=0)
     # plt.show()
 
 def align_and_crop_face(
@@ -162,4 +164,4 @@ img = Image.open(_pr_dirpath + '/input/model.png').convert("RGB")
 face_detector = get_dlib_face_detector()
 landmarks = face_detector(img)
 # img2 = None
-display_facial_landmarks(img, landmarks, fig_size=[5, 5])
+display_facial_landmarks(img, landmarks, fig_size=[13, 13])

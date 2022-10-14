@@ -33,7 +33,7 @@ const port = 5000;
 const {exec} = require("child_process");
 const { url } = require('inspector');
 const { response } = require('express');
-var spawn = require("child_process").spawn('python3', [__dirname , '/public/hongdo_AI/cartoon_AI/face_detect.py']);
+var spawn = require("child_process").spawn('python3', [__dirname+'/public/hongdo_AI/cartoon_AI/face_detect.py']);
 // Requrotires the std_msgs message package
 
 
@@ -79,8 +79,11 @@ if (require.main === module) {
   })
 
   app.get('/intro.html', (req,res) =>{
-    res.sendFile(__dirname+'/intro.html');
-    console.log(__dirname+'')
+    res.sendFile(__dirname+'/intro.html');  
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py',async(err, stdout, stderr) => {
+      if(err) console.error(err)
+      console.log(stdout)
+    })
   })
 
   app.get('/select_effect.html', (req,res) =>{
@@ -110,9 +113,10 @@ if (require.main === module) {
     res.sendFile(__dirname+'/taking_pic.html');
     opnecv_capture();
     //사진 저장 후 경로 public/hongdo_AI/input  파일명 : model.jpg
-    spawn.on('exit',function(code,signal){
-      console.log('exit: ');
-   });
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py',async(err, stdout, stderr) => {
+      if(err) console.error(err)
+      console.log(stdout)
+    })
   })
 
 
@@ -160,15 +164,13 @@ if (require.main === module) {
       // if( url_service(JSON.stringify(response.url)) == true ) {
       //   return res.redirect("/drawn.html");
       // }
-
-      url_service(JSON.stringify(response.url))
     }
       // console.log(JSON.stringify(response.url))
     )
     .catch((error) => 
       console.error(error)
     );
-    
+    url_service(JSON.stringify(response.url))
     
   })
 
