@@ -113,16 +113,12 @@ if (require.main === module) {
     res.sendFile(__dirname+'/taking_pic.html');
     opnecv_capture();
     //사진 저장 후 경로 public/hongdo_AI/input  파일명 : model.jpg
-    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py',async(err, stdout, stderr) => {
-      if(err) console.error(err)
-      console.log(stdout)
-    })
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/face_detect.py');
   })
 
 
   app.get('/select_pic.html', (req,res) =>{
     res.sendFile(__dirname+'/select_pic.html');
-    
   })
 
 
@@ -131,11 +127,8 @@ if (require.main === module) {
     // drawing motion 
 
 
-    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py',async(err, stdout, stderr) => {
-      if(err) console.error(err)
-      console.log(stdout)
-      mix_image();
-    })
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py')
+    mix_image();
     // simple AI
 
 
@@ -160,18 +153,12 @@ if (require.main === module) {
 
   app.get('/QR_make.html', (req,res) => {
     res.sendFile(__dirname+'/QR_make.html');
-    imgbbUploader("e4422a3845100fe670775736ffd0e7cb", __dirname+'/public/hongdo_AI/output/mix_model.png'). then((response)=> {
+    imgbbUploader("e4422a3845100fe670775736ffd0e7cb", __dirname+'/public/hongdo_AI/output/mix_model.png'), (response)=> {
       // if( url_service(JSON.stringify(response.url)) == true ) {
       //   return res.redirect("/drawn.html");
       // }
+      url_service(JSON.stringify(response.url))
     }
-      // console.log(JSON.stringify(response.url))
-    )
-    .catch((error) => 
-      console.error(error)
-    );
-    url_service(JSON.stringify(response.url))
-    
   })
 
 

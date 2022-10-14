@@ -106,6 +106,11 @@ if (require.main === module) {
 
   app.get('/intro.html', (req,res) =>{
     res.sendFile(__dirname+'/intro.html');
+    const { exec } = require("child_process")
+    exec('python3.8 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py',async(err, stdout, stderr) => {
+      if(err) console.error(err)
+      console.log(stdout)
+    })
   })
 
 
@@ -122,11 +127,7 @@ if (require.main === module) {
     // talker_service();
 
     // delete saved image
-    // const { exec } = require("child_process")
-    // exec(`roscd hongdo_ros_web && cd scripts/public/img/uploads && rm -f model.jpg && rm -f hi.png && rm -f Alimage.png`,async(err, stdout, stderr) => {
-    //   if(err) console.error(err)
-    //   console.log(stdout)
-    // })
+
 
     res.sendFile(__dirname+'/upload.html');
   })
