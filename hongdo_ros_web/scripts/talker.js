@@ -123,7 +123,7 @@ if (require.main === module) {
     // drawing motion 
 
 
-    exec('python3 '+__dirname + '/public/hongdo_AI/simple_AI/vision.py',async(err, stdout, stderr) => {
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py',async(err, stdout, stderr) => {
       if(err) console.error(err)
       console.log(stdout)
       mix_image();
