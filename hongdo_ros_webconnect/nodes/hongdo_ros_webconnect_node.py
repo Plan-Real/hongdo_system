@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import string
+from ctypes import sizeof
 import cv2
 import rospy
 import rospkg
@@ -9,6 +9,7 @@ from hongdo_ros_webconnect.srv import PlaySong, PlaySongResponse
 from PIL import Image
 import qrcode
 import os
+import Image_add
 
 class fileRoot(object):
     pkg_path = rospkg.RosPack()
@@ -25,6 +26,9 @@ class Qrmake():
 
     def url_connect(self, req):
         rospy.loginfo("Node is making QR")
+        if(req.url[0]=='"'):
+            url_message=req.url.split('"')
+            req.url=url_message[1]
         rospy.loginfo("Returning : " + req.url)
         hongdo_img = Image.open(self._character_path) 
         #character image open
@@ -67,6 +71,8 @@ class OpencvWebcam():
                     cv2.imshow('camera',frame)          # 프레임 화면에 표시
                     cv2.imwrite(self._save_path+'/{0}.png'.format(self._number), frame) # 프레임을 'photo.jpg'에 저장
                     cv2.imwrite(self._AI_path+'/model.png', frame)
+                    # result_image = Image_add.Image_add(self._frontground_path,frame)
+                    # cv2.imwrite(self._AI_path+'/mix_model.png',result_image)
                     rospy.loginfo('capture success')
                     break
                 else:
@@ -87,8 +93,9 @@ class OpencvWebcam():
         self._save_path=None
         self._AI_path=None
         self._number=None
+        self.frontground_path=None
 
-class SoundStart:
+class SoundStart():
     _voice_path=None
     _sound_path=None
 
@@ -110,6 +117,29 @@ class SoundStart:
         self._voice_path=None
         self._sound_path=None
 
+class Imagemix():
+    _result_image=None
+    _img_fg_path=None
+    _img_bg_path=None
+    _mix_save_path=None
+
+    def __init__(self,img_fg_path, img_bg_path, mix_save_path):
+        self._img_fg_path=img_fg_path
+        self._img_bg_path=img_bg_path
+        self._mix_save_path=mix_save_path
+
+    def image_mix(self,req):
+        print("hi")
+        self._result_image=Image_add.Image_add(self._img_fg_path, self._img_bg_path)
+        cv2.imwrite(self._mix_save_path , self._result_image)
+        return TriggerResponse(True, 'finish')
+    
+    def __del__(self):
+        self._result_image=None
+        self._img_fg_path=None
+        self._img_bg_path=None
+        self._mix_save_path=None
+
 class hongdorosWebconnectNode:
     def __init__(self):
         #qr
@@ -119,23 +149,30 @@ class hongdorosWebconnectNode:
         #opencv
         backup_save_path=fileRoot.web + '/scripts/public/hongdo_AI/backup_origin'
         AI_save_path=fileRoot.web + '/scripts/public/hongdo_AI/input'
+        # frontground_path=fileRoot.webconnect + 'images/frontground.png'
 
         #sound
         voice_path = fileRoot.webconnect + '/speak/voice'
         sound_path = fileRoot.webconnect + '/speak/sound'
 
+        #Image_add
+        img_fg_path = fileRoot.webconnect + '/images/frontground.png'
+        img_bg_path = fileRoot.web + '/scripts/public/hongdo_AI/output/trained_model.png'
+        mix_save_path=  fileRoot.web + '/scripts/public/hongdo_AI/output/mix_model.png'
+
         self.qr_make=Qrmake(qr_character_path,qr_save_path)
         self.opencv_webcam=OpencvWebcam(backup_save_path,AI_save_path)
         self.sound_start=SoundStart(voice_path, sound_path)
+        self.image_mix=Imagemix(img_fg_path, img_bg_path, mix_save_path)
 
         ##service
         rospy.Service('/make_qr', UrlTunnel, self.qr_make.url_connect)
         rospy.Service('/capture', Trigger, self.opencv_webcam.capture)
-        rospy.Service('/play_song', PlaySong, self.sound_start.play_sound)
-        rospy.Service('/play_voice', PlaySong, self.sound_start.play_voice)
-        
+        rospy.Service('/play_song', PlaySong, self.sound_start.play_voice)
+        rospy.Service('/mix_pic', Trigger, self.image_mix.image_mix)
+
         # self.opencvStart()
-        rospy.loginfo('Ready to capture order')
+        rospy.loginfo('Ready webconnect Node')
         rospy.on_shutdown(self.__del__)
 
     def main(self):

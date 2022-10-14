@@ -29,3 +29,9 @@ go_back.addEventListener("click", e=>{
         location.replace("intro.html");
     },300);
 });
+
+const back = document.getElementById("back");
+
+back.addEventListener("click", e=>{
+ location.replace("QR_make.html")
+});

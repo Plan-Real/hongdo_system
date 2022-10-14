@@ -60,6 +60,10 @@ function url_service(urlstring) {
 
 }
 
+function mix_image() {
+  const client = nh.serviceClient('/mix_pic', 'std_srvs/Trigger');
+  client.call()
+}
 
 
 
@@ -115,13 +119,14 @@ if (require.main === module) {
 
 
   app.get('/loading.html', (req,res) =>{
-    // handshake_service();
+    handshake_service();
     // drawing motion 
 
 
     exec('python3 '+__dirname + '/public/hongdo_AI/simple_AI/vision.py',async(err, stdout, stderr) => {
       if(err) console.error(err)
       console.log(stdout)
+      mix_image();
     })
     // simple AI
 
@@ -147,7 +152,7 @@ if (require.main === module) {
 
   app.get('/QR_make.html', (req,res) => {
     res.sendFile(__dirname+'/QR_make.html');
-    imgbbUploader("e4422a3845100fe670775736ffd0e7cb", '/home/jeonghan/catkin_ws/src/hongdo_ros/hongdo_ros_web/scripts/public/hongdo_AI/output/trained_model.png'). then((response)=> {
+    imgbbUploader("e4422a3845100fe670775736ffd0e7cb", __dirname+'/public/hongdo_AI/output/mix_model.png'). then((response)=> {
       // if( url_service(JSON.stringify(response.url)) == true ) {
       //   return res.redirect("/drawn.html");
       // }
