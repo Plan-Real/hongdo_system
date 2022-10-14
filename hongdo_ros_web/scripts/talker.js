@@ -108,7 +108,11 @@ if (require.main === module) {
   app.get('/taking_pic.html', (req,res) =>{
     res.sendFile(__dirname+'/taking_pic.html');
     opnecv_capture();
-    //사진 저장 후 경로 public/hongdo_AI/input  파일명 : model.jpg 
+    //사진 저장 후 경로 public/hongdo_AI/input  파일명 : model.jpg
+    exec('python3 '+__dirname + '/public/hongdo_AI/cartoon_AI/cartoon.py',async(err, stdout, stderr) => {
+      if(err) console.error(err)
+      console.log(stdout)
+    }) 
   })
 
 
@@ -157,14 +161,14 @@ if (require.main === module) {
       //   return res.redirect("/drawn.html");
       // }
 
-      response_url = response;
+      url_service(JSON.stringify(response.url))
     }
       // console.log(JSON.stringify(response.url))
     )
     .catch((error) => 
       console.error(error)
     );
-    url_service(JSON.stringify(response_url.url))
+    
     
   })
 
