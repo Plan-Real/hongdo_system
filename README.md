@@ -35,7 +35,7 @@ contact : iam_midnight@naver.com
 
 홍도 로봇은 HRI 관점을 강조한 로봇이다. 홍도는 자유롭게 광장을 돌아다니며 사람과 상호작용을 한다. 사람을 탐지하면 사람에게 다가가고 사람에게 말을 건다. 행사에 어울리는 UI가 제작되어 사람은 UI를 통해 로봇과 상호작용한다. 사람들은 UI에서 자신의 사진촬영을 할수 있고 여러 인공지능 기술을 통해 그러한 사진들을 다양한 모습으로 변환시켜준다.
 
-The Hongdo robot is a robot that emphasizes the HRI perspective. Hongdo freely travels around the square and interacts with people. When you detect people, you approach them and talk to them. UI suitable for the event is produced, and humans interact with robots through UI. People can take pictures of themselves in the UI and convert them into various Character through various artificial intelligence technologies.
+Hongdo is a robot that emphasizes the HRI perspective. Hongdo freely roams the plaza and interacts with people. When it detects people, it approaches them and speaks to them. A UI is created for the event and people interact with the robot through the UI. People can take photos of themselves on the UI, and various AI technologies transform the photos into various looks.
 
 ##### Festival photos and videos
 
