@@ -8,12 +8,13 @@
     <meta property="og:title" content="Hongdo Robot: Ansan Mascot Promotional Robot">
     <meta property="og:description" content="An HRI-focused robot that roams event spaces, approaches visitors, speaks, and turns participant photos into drawings through a web UI.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://plan-real.github.io/hongdo_system/assets/hongdo-festival.gif">
+    <meta property="og:image" content="https://plan-real.github.io/hongdo_system/assets/youth-day-festival.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Varela+Round&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="icon" href="assets/youth-day-festival.jpg">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -56,11 +57,11 @@
         <section class="section hero-section" aria-labelledby="tldr-heading">
             <h2 id="tldr-heading" class="tldr"><strong>TL;DR:</strong> Hongdo is an HRI-focused promotional robot that moves through event spaces, approaches detected visitors, speaks with them, and offers a traditional Korean-style web experience that transforms participant photos into drawings.</h2>
             <figure class="media-frame">
-                <img src="assets/hongdo-festival.gif" alt="Hongdo robot interacting with visitors at a festival booth.">
-                <figcaption>Festival deployment of the Hongdo mascot robot and interactive booth experience.</figcaption>
+                <video src="assets/main-video.mp4" poster="assets/youth-day-festival.jpg" autoplay muted loop playsinline controls></video>
+                <figcaption>Main deployment video from the Ansan Youth Day Festival.</figcaption>
             </figure>
             <p class="paragraph">
-                The system combines ROS bringup, motor control, perception, obstacle sensing, a browser-based robot display, and AI image conversion. Its public-facing interaction flow lets visitors take a photo, watch the robot perform, and receive a stylized artwork result through the event UI.
+                The system combines ROS bringup, motor control, perception, obstacle sensing, a browser-based robot display, and AI image conversion. Hongdo was deployed at four public festivals, starting with Ansan Everyone's Playground Festival (안산 모두의 놀이터 축제); this page highlights the third deployment, Ansan Youth Day Festival, where visitors interacted with the robot through the event UI.
             </p>
         </section>
 
@@ -89,11 +90,23 @@
             <h2 id="gallery-heading" class="section-heading">Robot And Interaction Design</h2>
             <div class="gallery-grid">
                 <figure>
-                    <img src="assets/festival-robot-platform.jpg" alt="Hongdo robot standing in an indoor event space.">
-                    <figcaption>Festival robot platform</figcaption>
+                    <img src="assets/first-festival-1.jpg" alt="Hongdo robot display setup at Ansan Everyone's Playground Festival.">
+                    <figcaption>Ansan Everyone's Playground Festival (안산 모두의 놀이터 축제)</figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/public-booth-interaction.jpg" alt="Hongdo robot operating near a visitor table.">
+                    <img src="assets/first-festival-2.jpg" alt="Team members posing with Hongdo at Ansan Everyone's Playground Festival.">
+                    <figcaption>Ansan Everyone's Playground Festival (안산 모두의 놀이터 축제)</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/youth-day-festival.jpg" alt="Hongdo robot interacting with children at Ansan Youth Day Festival.">
+                    <figcaption>Ansan Youth Day Festival</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/hongdo-festival.gif" alt="Hongdo robot interacting with visitors at a festival booth.">
+                    <figcaption>Festival robot demo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/public-booth-interaction.jpg" alt="Hongdo robot operating near an outdoor visitor area.">
                     <figcaption>Public booth interaction</figcaption>
                 </figure>
                 <figure>
@@ -120,6 +133,24 @@
                 <img src="assets/system-architecture.png" alt="Hongdo robot software and hardware architecture diagram.">
                 <figcaption>System architecture from robot hardware to NUC-side ROS modules.</figcaption>
             </figure>
+        </section>
+
+        <section class="section" aria-labelledby="behind-heading">
+            <h2 id="behind-heading" class="section-heading">Behind The Build</h2>
+            <div class="behind-grid">
+                <figure>
+                    <img src="assets/build-process-1.jpg" alt="Team member sanding and finishing the Hongdo robot head shell during fabrication.">
+                    <figcaption>Head shell finishing</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/build-process-2.jpg" alt="Hongdo robot head parts placed on a workbench during fabrication.">
+                    <figcaption>Fabrication workspace</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/field-debugging.jpg" alt="Team member debugging Hongdo on site beside the event booth.">
+                    <figcaption>On-site debugging</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section class="section" aria-labelledby="ai-heading">

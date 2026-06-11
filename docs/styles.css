@@ -177,12 +177,16 @@ a:focus-visible {
     margin: 0;
 }
 
-.media-frame img {
+.media-frame img,
+.media-frame video {
+    display: block;
+    width: 100%;
     max-height: 620px;
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
     border: 1px solid var(--color-border);
+    background: #000000;
 }
 
 figcaption {
@@ -212,6 +216,7 @@ figcaption {
 
 .overview-grid,
 .gallery-grid,
+.behind-grid,
 .pipeline-grid {
     display: grid;
     gap: 16px;
@@ -257,24 +262,25 @@ figcaption {
 }
 
 .gallery-grid {
-    grid-template-columns: 0.85fr 1.15fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
 }
 
 .gallery-grid figure,
+.behind-grid figure,
 .pipeline-grid figure,
 .architecture-figure {
     margin: 0;
 }
 
 .gallery-grid img {
-    height: 280px;
+    height: 240px;
     object-fit: cover;
     border: 1px solid var(--color-border);
     border-radius: 8px;
 }
 
-.gallery-grid figure:nth-child(3) img {
+.gallery-grid figure:nth-child(6) img {
     object-position: top center;
 }
 
@@ -309,6 +315,17 @@ figcaption {
 
 .pipeline-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.behind-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.behind-grid img {
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
 }
 
 .pipeline-grid img {
@@ -351,6 +368,7 @@ figcaption {
 
     .overview-grid,
     .gallery-grid,
+    .behind-grid,
     .pipeline-grid,
     .split-section {
         grid-template-columns: 1fr;
@@ -361,6 +379,7 @@ figcaption {
     }
 
     .gallery-grid img,
+    .behind-grid img,
     .pipeline-grid img {
         height: auto;
         max-height: 420px;
