@@ -1,136 +1,91 @@
-# Hongdo robot : Ansan Mascot Promotional Robot
+# Hongdo Robot
 
-## project Team : W.A.B
+Hongdo is an Ansan mascot promotional robot developed by Team PlanR at Hanyang University.
+It is an HRI-focused robot system for public events: the robot moves through event spaces, detects visitors, speaks with them, and provides a web-based photo-to-art interaction experience.
 
-### Member 
-#### Robot Hardware Developer : 
+Project page: https://plan-real.github.io/hongdo_system/
 
-이왕건(Wanggeon Lee), 박수환(Suhwan Park)
+## Overview
 
-contact : dldhkdrjs2@hanyang.ac.kr, uni3967@hanyang.ac.kr
+Hongdo combines ROS-based robot control, lidar obstacle handling, web-based user interaction, and AI image conversion.
 
-#### Robot Software Developer :
+Main features:
 
-[김정한(Jeonghan Kim)](https://github.com/Kim-JeongHan),  [박종찬(Jongchan Park)](https://github.com/coldbell8918), [이하연(Hayeon Lee)](https://github.com/quokkalover), 김다현(Dahyun Kim)
+- ROS bringup for robot, motors, TF, lidar, and web connection
+- Browser-based robot display UI
+- Visitor photo capture and AI style conversion flow
+- URDF and mesh description for the robot model
+- Dynamixel and mobile base integration
 
-#### web Developer:
+## Repository Structure
 
-[남윤재(Yunjea Nam)](https://github.com/ujma1234) 
+| Package | Description |
+| --- | --- |
+| `hongdo_ros_bringup` | Main launch files for robot, motor, model, and web connection |
+| `hongdo_ros_web` | Browser-based event UI shown on the robot display |
+| `hongdo_ros_webconnect` | ROS-Web bridge nodes, capture, QR, speech, and service logic |
+| `hongdo_ros_obstacle` | Lidar driver and obstacle detection logic |
+| `hongdo_ros_description` | URDF, xacro, RViz config, and robot meshes |
+| `hongdo_ros_dynamixel` | Dynamixel workbench packages and joint control |
+| `hongdo_ros_teleop` | Keyboard teleoperation package |
+| `hongdo_ros_tf2_broadcaster` | TF broadcaster examples and sensor transform demos |
 
-#### Robot Designer : 
+## Installation
 
-김새벽(Saebyeok Kim)
+```bash
+git clone https://github.com/Plan-Real/hongdo_system.git
+cd hongdo_system/build_dependecy
 
-contact : iam_midnight@naver.com
-
----
-
-### 
-
-## Abstract
-
-홍도 로봇은 HRI 관점을 강조한 로봇이다. 홍도는 자유롭게 광장을 돌아다니며 사람과 상호작용을 한다. 사람을 탐지하면 사람에게 다가가고 사람에게 말을 건다. 행사에 어울리는 UI가 제작되어 사람은 UI를 통해 로봇과 상호작용한다. 사람들은 UI에서 자신의 사진촬영을 할수 있고 여러 인공지능 기술을 통해 그러한 사진들을 다양한 모습으로 변환시켜준다.
-
-Hongdo is a robot that emphasizes the HRI perspective. Hongdo freely roams the plaza and interacts with people. When it detects people, it approaches them and speaks to them. A UI is created for the event and people interact with the robot through the UI. People can take photos of themselves on the UI, and various AI technologies transform the photos into various looks.
-
-##### Festival photos and videos
-
-![kakaotalk_1664012771411 (1) (1) (1)](https://user-images.githubusercontent.com/98142496/192100213-434298d9-2b1d-484d-a7c5-c4f32bebdeb7.gif)
-
-<img src="https://user-images.githubusercontent.com/98142496/192099659-0172cb13-8c62-4199-8551-1cbf48f1827f.jpg" width="270" height="360"/>  <img src="https://user-images.githubusercontent.com/98142496/192099662-f4a619b8-fc9d-4ac7-97b2-509584ee4d85.jpg" width="480" height="360"/>
-
-
-
-
-## Hardware system :
-
-### Design
-
-
-<img src="https://user-images.githubusercontent.com/98142496/192099216-b592f7ad-1079-46f9-9144-1aaa22e744a5.png" width="360" height="540"/> <img src="https://user-images.githubusercontent.com/98142496/192100569-c13b93d8-5193-4cb3-9acb-14f82dbc4cf1.png" width="360" height="480"/>
-
-### Architecture
-
-![omorobot_system](https://user-images.githubusercontent.com/98142496/192099227-008ed8e3-2eb9-4550-b3aa-bb648ad3f12f.png)
-
-
-
-
-
-## Software system :
-
-### NUC System
-#### web
-If you are curious about the contents related to the web, click this link.
-[hongdo_ros_web](https://github.com/Hanyang-WAB/hongdo_system/tree/hongdo_master/hongdo_ros_web)
-
-#### AI
-
-| **Input model**                                              | **Output model 1**                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![model](https://user-images.githubusercontent.com/98142496/192099320-d95b1a7d-dde2-4015-a8bc-bd2ef13b64d8.png)                                                             |    ![trained_model](https://user-images.githubusercontent.com/98142496/192099348-fc619ba1-7be5-4d63-9316-f5be57372f74.png)                                                          |
-|                                                              | [Vijish Madhavan of Artline](https://github.com/vijishmadhavan/ArtLine) |
-|                      **Output model 2**                      |                         **Output model 3**                   |
-|                                                              |    
-![result_RGB](https://user-images.githubusercontent.com/98142496/192099371-f28bf4e0-4e86-4063-ac9c-153722ae81eb.jpg)                                                          | ![trained_model (1)](https://user-images.githubusercontent.com/98142496/192099561-dddc295a-bfce-4a5c-9661-9fed31a27ceb.png)
-| [Sketch Generation with Drawing Process Guided by Vector Flow and Grayscale](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale) | [animegan2-pytorch](https://github.com/bryandlee/animegan2-pytorch) |
-
-### Jetson System
-#### vision
-If you are curious about the contents related to the vision, click this link.
-[hongdo_ros_soft](https://github.com/coldbell8918/Hongdo_soft)
-
-
-## How To Do:
-
-### Install dependency
-
-- G2 lidar package
-
-##### Methods for installing most dependencies
-
-```
-git clone https://github.com/Hanyang-WAB/hongdo_system.git
-cd bulid_dependency
 sudo ./build.sh
 sudo ./create_udev_rules.sh
 ```
 
+## Run
 
+Robot bringup:
 
-### launch on NUC
+```bash
+roslaunch hongdo_ros_bringup hongdo_ros_robot.launch
+```
 
-1. bringup
+Web connection:
 
-   ```
-   roslaunch hongdo_ros_bringup hongdo_ros_robot.launch
-   ```
+```bash
+roslaunch hongdo_ros_webconnect hongdo_ros_webconnect.launch
+```
 
-2. webconnect
+Web UI:
 
-   ```
-   roslaunch hongdo_ros_webconnect hongdo_ros_webconnect.launch
-   ```
+```bash
+rosrun hongdo_ros_web talker.js
+```
 
-3. web
+For web-only testing:
 
-   ```
-   rosun hongdo_ros_web talker.js
-   ```
+```bash
+cd hongdo_ros_web
+node scripts/nam.js
+```
 
-   
+Then open:
 
-## reference :
+```text
+http://localhost:5000/intro.html
+```
 
-##### AI(Convert image) : 
+## References
 
-[animegan2-pytorch](https://github.com/bryandlee/animegan2-pytorch)
+AI image conversion references:
 
-[Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale)
+- [animegan2-pytorch](https://github.com/bryandlee/animegan2-pytorch)
+- [Sketch Generation with Drawing Process Guided by Vector Flow and Grayscale](https://github.com/TZYSJTU/Sketch-Generation-with-Drawing-Process-Guided-by-Vector-Flow-and-Grayscale)
+- [ArtLine](https://github.com/vijishmadhavan/ArtLine)
 
-[ArtLine](https://github.com/vijishmadhavan/ArtLine)
+Human detection reference:
 
-##### Human detecting : 
+- [YOLOv5](https://github.com/ultralytics/yolov5)
 
-[yolov5](https://github.com/ultralytics/yolov5)
+## License
 
+Robot character and related design rights follow the original project notes and Ansan Cultural Foundation restrictions.
+Source code is provided under the licenses included in this repository.
