@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hongdo Robot: Ansan Mascot Promotional Robot</title>
+    <meta name="description" content="Project page for Hongdo, an HRI-focused Ansan mascot promotional robot with ROS, mobile interaction, and an event web UI.">
+    <meta property="og:title" content="Hongdo Robot: Ansan Mascot Promotional Robot">
+    <meta property="og:description" content="An HRI-focused robot that roams event spaces, approaches visitors, speaks, and turns participant photos into drawings through a web UI.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/98142496/192100213-434298d9-2b1d-484d-a7c5-c4f32bebdeb7.gif">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Varela+Round&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="title">Hongdo Robot</h1>
+        <div class="subtitle-lines" aria-label="Project subtitle">
+            <p>Ansan Mascot Promotional Robot</p>
+            <p>ROS-Based HRI System for Public Events</p>
+        </div>
+
+        <nav class="author-row" aria-label="Project contributors">
+            <span>Wanggeon Lee</span>
+            <span>Suhwan Park</span>
+            <a href="https://github.com/Kim-JeongHan" target="_blank" rel="noreferrer">Jeonghan Kim</a>
+            <a href="https://github.com/coldbell8918" target="_blank" rel="noreferrer">Jongchan Park</a>
+            <a href="https://github.com/quokkalover" target="_blank" rel="noreferrer">Hayeon Lee</a>
+            <span>Dahyun Kim</span>
+            <a href="https://github.com/ujma1234" target="_blank" rel="noreferrer">Yunjea Nam</a>
+            <span>Park-Hye-Won</span>
+            <span>Saebyeok Kim</span>
+        </nav>
+
+        <p class="affiliation">Hanyang University W.A.B</p>
+
+        <div class="action-row" aria-label="Project links">
+            <a class="button-link" href="https://github.com/Plan-Real/hongdo_system" target="_blank" rel="noreferrer">
+                <i class="ti ti-brand-github" aria-hidden="true"></i>
+                <span>Code</span>
+            </a>
+            <a class="button-link" href="https://github.com/Plan-Real/hongdo_system/tree/hongdo_master/hongdo_ros_web" target="_blank" rel="noreferrer">
+                <i class="ti ti-world" aria-hidden="true"></i>
+                <span>Web UI</span>
+            </a>
+            <a class="button-link" href="#launch">
+                <i class="ti ti-terminal-2" aria-hidden="true"></i>
+                <span>Launch</span>
+            </a>
+        </div>
+
+        <p class="project-expansion">(<strong>Hongdo</strong>: mobile mascot robot for visitor interaction and AI photo transformation)</p>
+    </header>
+
+    <main>
+        <section class="section hero-section" aria-labelledby="tldr-heading">
+            <h2 id="tldr-heading" class="tldr"><strong>TL;DR:</strong> Hongdo is an HRI-focused promotional robot that moves through event spaces, approaches detected visitors, speaks with them, and offers a traditional Korean-style web experience that transforms participant photos into drawings.</h2>
+            <figure class="media-frame">
+                <img src="https://user-images.githubusercontent.com/98142496/192100213-434298d9-2b1d-484d-a7c5-c4f32bebdeb7.gif" alt="Hongdo robot interacting with visitors at a festival booth.">
+                <figcaption>Festival deployment of the Hongdo mascot robot and interactive booth experience.</figcaption>
+            </figure>
+            <p class="paragraph">
+                The system combines ROS bringup, motor control, perception, obstacle sensing, a browser-based robot display, and AI image conversion. Its public-facing interaction flow lets visitors take a photo, watch the robot perform, and receive a stylized artwork result through the event UI.
+            </p>
+        </section>
+
+        <section class="section" aria-labelledby="overview-heading">
+            <h2 id="overview-heading" class="section-heading">System Overview</h2>
+            <div class="overview-grid">
+                <article class="overview-item">
+                    <i class="ti ti-route" aria-hidden="true"></i>
+                    <h3>Mobile Robot</h3>
+                    <p>Launch files coordinate robot bringup, TF, motors, lidar, web connection, and the display workflow.</p>
+                </article>
+                <article class="overview-item">
+                    <i class="ti ti-user-search" aria-hidden="true"></i>
+                    <h3>Visitor Interaction</h3>
+                    <p>Human detection and obstacle modules support event-space approach behavior and safe movement.</p>
+                </article>
+                <article class="overview-item">
+                    <i class="ti ti-photo-spark" aria-hidden="true"></i>
+                    <h3>AI Photo Experience</h3>
+                    <p>The web interface guides photo capture, style selection, image conversion, and result sharing.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading" class="section-heading">Robot And Interaction Design</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/98142496/192099659-0172cb13-8c62-4199-8551-1cbf48f1827f.jpg" alt="Hongdo robot standing in an indoor event space.">
+                    <figcaption>Festival robot platform</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/98142496/192099662-f4a619b8-fc9d-4ac7-97b2-509584ee4d85.jpg" alt="Hongdo robot operating near a visitor table.">
+                    <figcaption>Public booth interaction</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/98142496/192099216-b592f7ad-1079-46f9-9144-1aaa22e744a5.png" alt="Character design sheet for the Hongdo robot.">
+                    <figcaption>Mascot character design</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section split-section" aria-labelledby="architecture-heading">
+            <div>
+                <h2 id="architecture-heading" class="section-heading">Architecture</h2>
+                <p class="paragraph">
+                    Hongdo is organized as a ROS workspace. The NUC-side packages handle bringup, web integration, teleoperation, TF broadcasting, obstacle sensing, and robot description. The web layer is served from Node.js and connects the robot display to the ROS workflow.
+                </p>
+                <ul class="feature-list">
+                    <li><strong>hongdo_ros_bringup</strong> starts robot, model, motor, and web-connect launch flows.</li>
+                    <li><strong>hongdo_ros_web</strong> serves the event interface and photo conversion flow.</li>
+                    <li><strong>hongdo_ros_obstacle</strong> integrates lidar and obstacle messages.</li>
+                    <li><strong>hongdo_ros_description</strong> stores URDF and mesh assets for the robot model.</li>
+                </ul>
+            </div>
+            <figure class="architecture-figure">
+                <img src="https://user-images.githubusercontent.com/98142496/192099227-008ed8e3-2eb9-4550-b3aa-bb648ad3f12f.png" alt="Hongdo robot software and hardware architecture diagram.">
+                <figcaption>System architecture from robot hardware to NUC-side ROS modules.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section" aria-labelledby="ai-heading">
+            <h2 id="ai-heading" class="section-heading">Photo-To-Art Pipeline</h2>
+            <div class="pipeline-grid">
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/98142496/192099320-d95b1a7d-dde2-4015-a8bc-bd2ef13b64d8.png" alt="Original input photo used for AI conversion.">
+                    <figcaption>Input photo</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/98142496/192099348-fc619ba1-7be5-4d63-9316-f5be57372f74.png" alt="Line-art conversion output from the AI pipeline.">
+                    <figcaption>Line-art output</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://user-images.githubusercontent.com/98142496/192099561-dddc295a-bfce-4a5c-9661-9fed31a27ceb.png" alt="Anime-style conversion output from the AI pipeline.">
+                    <figcaption>Stylized output</figcaption>
+                </figure>
+            </div>
+            <p class="paragraph">
+                The conversion flow references open-source image translation and sketch-generation projects, then wraps those outputs in a robot-facing event interaction. The visitor sees a continuous experience: capture, select, convert, and receive.
+            </p>
+        </section>
+
+        <section id="launch" class="section" aria-labelledby="launch-heading">
+            <h2 id="launch-heading" class="section-heading">Launch</h2>
+            <div class="command-grid">
+                <div>
+                    <h3>Robot Bringup</h3>
+                    <pre><code>roslaunch hongdo_ros_bringup hongdo_ros_robot.launch</code></pre>
+                </div>
+                <div>
+                    <h3>Web Connection</h3>
+                    <pre><code>roslaunch hongdo_ros_webconnect hongdo_ros_webconnect.launch</code></pre>
+                </div>
+                <div>
+                    <h3>Web UI</h3>
+                    <pre><code>rosrun hongdo_ros_web talker.js</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section citation-section" aria-labelledby="citation-heading">
+            <h2 id="citation-heading" class="section-heading">Citation</h2>
+            <button class="copy-button" type="button" data-copy-target="citation-code">
+                <i class="ti ti-copy" aria-hidden="true"></i>
+                <span>Copy</span>
+            </button>
+            <pre class="citation"><code id="citation-code">@misc{hongdo_system_2022,
+  title = {Hongdo Robot: Ansan Mascot Promotional Robot},
+  author = {W.A.B Team},
+  howpublished = {GitHub repository: https://github.com/Plan-Real/hongdo_system},
+  year = {2022}
+}</code></pre>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Project page layout inspired by the PyRoki project page. Hongdo robot and character-related content follows the repository licensing notes.</p>
+    </footer>
+
+    <script src="project.js"></script>
+</body>
+</html>
