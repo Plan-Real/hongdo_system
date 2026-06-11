@@ -264,17 +264,95 @@ figcaption {
     margin: 0;
 }
 
-.wild-section {
+.deployments-section,
+.behind-section {
     max-width: 1080px;
 }
 
-.wild-intro {
+.section-intro {
     max-width: 760px;
     margin: 0 auto 16px;
     color: var(--color-muted);
     font-size: 16px;
     line-height: 1.55;
     text-align: center;
+}
+
+.deployment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.deployment-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(47, 49, 54, 0.07);
+}
+
+.deployment-card--featured {
+    border-color: rgba(184, 50, 50, 0.34);
+}
+
+.deployment-card--pending {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-panel);
+}
+
+.deployment-index {
+    margin: 0 0 8px;
+    color: var(--color-accent);
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.deployment-card h3 {
+    margin: 0;
+    color: #23262b;
+    font-size: 19px;
+    line-height: 1.35;
+    letter-spacing: 0;
+}
+
+.deployment-card p:not(.deployment-index) {
+    margin: 10px 0 0;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.deployment-media {
+    display: grid;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.deployment-media--pair,
+.deployment-media--feature {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.deployment-media figure {
+    margin: 0;
+}
+
+.deployment-media img,
+.deployment-media video {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-panel);
 }
 
 .results-carousel {
@@ -312,7 +390,7 @@ figcaption {
     border: 1px solid var(--color-border);
 }
 
-.results-carousel .item:nth-child(6) img {
+.results-carousel .item--top-image img {
     object-position: top center;
 }
 
@@ -398,6 +476,7 @@ figcaption {
     }
 
     .overview-grid,
+    .deployment-grid,
     .pipeline-grid,
     .split-section {
         grid-template-columns: 1fr;
@@ -408,6 +487,17 @@ figcaption {
     }
 
     .pipeline-grid img {
+        height: auto;
+        max-height: 420px;
+    }
+
+    .deployment-media--pair,
+    .deployment-media--feature {
+        grid-template-columns: 1fr;
+    }
+
+    .deployment-media img,
+    .deployment-media video {
         height: auto;
         max-height: 420px;
     }
