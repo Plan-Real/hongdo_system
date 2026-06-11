@@ -367,8 +367,13 @@ figcaption {
     background: var(--color-panel);
 }
 
-.deployment-media--feature figure:first-child {
+.deployment-media--feature figure {
     grid-column: 1 / -1;
+}
+
+.deployment-media--feature figure:not(:first-child) {
+    width: min(280px, 100%);
+    justify-self: center;
 }
 
 .results-carousel {
