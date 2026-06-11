@@ -406,10 +406,6 @@ figcaption {
     border: 1px solid var(--color-border);
 }
 
-.results-carousel .item--top-image img {
-    object-position: top center;
-}
-
 .results-carousel .subtitle {
     margin: 12px 0 0;
     color: var(--color-muted);
