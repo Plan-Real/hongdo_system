@@ -36,20 +36,16 @@
             <span>Saebyeok Kim</span>
         </nav>
 
-        <p class="affiliation">Hanyang University W.A.B</p>
+        <p class="affiliation">Hanyang University PlanR</p>
 
         <div class="action-row" aria-label="Project links">
             <a class="button-link" href="https://github.com/Plan-Real/hongdo_system" target="_blank" rel="noreferrer">
                 <i class="ti ti-brand-github" aria-hidden="true"></i>
                 <span>Code</span>
             </a>
-            <a class="button-link" href="https://github.com/Plan-Real/hongdo_system/tree/hongdo_master/hongdo_ros_web" target="_blank" rel="noreferrer">
+            <a class="button-link" href="https://github.com/Plan-Real/hongdo_system/tree/master/hongdo_ros_web" target="_blank" rel="noreferrer">
                 <i class="ti ti-world" aria-hidden="true"></i>
                 <span>Web UI</span>
-            </a>
-            <a class="button-link" href="#launch">
-                <i class="ti ti-terminal-2" aria-hidden="true"></i>
-                <span>Launch</span>
             </a>
         </div>
 
@@ -74,7 +70,7 @@
                 <article class="overview-item">
                     <i class="ti ti-route" aria-hidden="true"></i>
                     <h3>Mobile Robot</h3>
-                    <p>Launch files coordinate robot bringup, TF, motors, lidar, web connection, and the display workflow.</p>
+                    <p>ROS packages coordinate robot bringup, TF, motors, lidar, web connection, and the display workflow.</p>
                 </article>
                 <article class="overview-item">
                     <i class="ti ti-user-search" aria-hidden="true"></i>
@@ -147,43 +143,6 @@
             </p>
         </section>
 
-        <section id="launch" class="section" aria-labelledby="launch-heading">
-            <h2 id="launch-heading" class="section-heading">Launch</h2>
-            <div class="command-grid">
-                <div>
-                    <h3>Robot Bringup</h3>
-                    <pre><code>roslaunch hongdo_ros_bringup hongdo_ros_robot.launch</code></pre>
-                </div>
-                <div>
-                    <h3>Web Connection</h3>
-                    <pre><code>roslaunch hongdo_ros_webconnect hongdo_ros_webconnect.launch</code></pre>
-                </div>
-                <div>
-                    <h3>Web UI</h3>
-                    <pre><code>rosrun hongdo_ros_web talker.js</code></pre>
-                </div>
-            </div>
-        </section>
-
-        <section class="section citation-section" aria-labelledby="citation-heading">
-            <h2 id="citation-heading" class="section-heading">Citation</h2>
-            <button class="copy-button" type="button" data-copy-target="citation-code">
-                <i class="ti ti-copy" aria-hidden="true"></i>
-                <span>Copy</span>
-            </button>
-            <pre class="citation"><code id="citation-code">@misc{hongdo_system_2022,
-  title = {Hongdo Robot: Ansan Mascot Promotional Robot},
-  author = {W.A.B Team},
-  howpublished = {GitHub repository: https://github.com/Plan-Real/hongdo_system},
-  year = {2022}
-}</code></pre>
-        </section>
     </main>
-
-    <footer class="site-footer">
-        <p>Project page layout inspired by the PyRoki project page. Hongdo robot and character-related content follows the repository licensing notes.</p>
-    </footer>
-
-    <script src="project.js"></script>
 </body>
 </html>
