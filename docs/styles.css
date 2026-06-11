@@ -367,15 +367,6 @@ figcaption {
     background: var(--color-panel);
 }
 
-.deployment-media--feature figure {
-    grid-column: 1 / -1;
-}
-
-.deployment-media--feature figure:not(:first-child) {
-    width: min(280px, 100%);
-    justify-self: center;
-}
-
 .results-carousel {
     display: grid;
     grid-auto-columns: minmax(280px, 34%);
