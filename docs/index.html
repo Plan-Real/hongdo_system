@@ -86,6 +86,46 @@
             </div>
         </section>
 
+        <section class="section split-section" aria-labelledby="architecture-heading">
+            <div>
+                <h2 id="architecture-heading" class="section-heading">Architecture</h2>
+                <p class="paragraph">
+                    Hongdo is organized as a ROS workspace. The NUC-side packages handle bringup, web integration, teleoperation, TF broadcasting, obstacle sensing, and robot description. The web layer is served from Node.js and connects the robot display to the ROS workflow.
+                </p>
+                <ul class="feature-list">
+                    <li><strong>hongdo_ros_bringup</strong> starts robot, model, motor, and web-connect launch flows.</li>
+                    <li><strong>hongdo_ros_web</strong> serves the event interface and photo conversion flow.</li>
+                    <li><strong>hongdo_ros_obstacle</strong> integrates lidar and obstacle messages.</li>
+                    <li><strong>hongdo_ros_description</strong> stores URDF and mesh assets for the robot model.</li>
+                </ul>
+            </div>
+            <figure class="architecture-figure">
+                <img src="assets/system-architecture.png" alt="Hongdo robot software and hardware architecture diagram.">
+                <figcaption>System architecture from robot hardware to NUC-side ROS modules.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section" aria-labelledby="ai-heading">
+            <h2 id="ai-heading" class="section-heading">Photo-To-Art Pipeline</h2>
+            <div class="pipeline-grid">
+                <figure>
+                    <img src="assets/ai-input-photo.png" alt="Original input photo used for AI conversion.">
+                    <figcaption>Input photo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/ai-line-art-output.png" alt="Line-art conversion output from the AI pipeline.">
+                    <figcaption>Line-art output</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/ai-stylized-output.png" alt="Anime-style conversion output from the AI pipeline.">
+                    <figcaption>Stylized output</figcaption>
+                </figure>
+            </div>
+            <p class="paragraph">
+                The conversion flow references open-source image translation and sketch-generation projects, then wraps those outputs in a robot-facing event interaction. The visitor sees a continuous experience: capture, select, convert, and receive.
+            </p>
+        </section>
+
         <section class="section wild-section" aria-labelledby="wild-heading">
             <h2 id="wild-heading" class="section-heading">Hongdo in the Wild</h2>
             <p class="wild-intro">
@@ -129,46 +169,6 @@
                     <h3 class="subtitle">On-site debugging keeps the festival interaction stable.</h3>
                 </article>
             </div>
-        </section>
-
-        <section class="section split-section" aria-labelledby="architecture-heading">
-            <div>
-                <h2 id="architecture-heading" class="section-heading">Architecture</h2>
-                <p class="paragraph">
-                    Hongdo is organized as a ROS workspace. The NUC-side packages handle bringup, web integration, teleoperation, TF broadcasting, obstacle sensing, and robot description. The web layer is served from Node.js and connects the robot display to the ROS workflow.
-                </p>
-                <ul class="feature-list">
-                    <li><strong>hongdo_ros_bringup</strong> starts robot, model, motor, and web-connect launch flows.</li>
-                    <li><strong>hongdo_ros_web</strong> serves the event interface and photo conversion flow.</li>
-                    <li><strong>hongdo_ros_obstacle</strong> integrates lidar and obstacle messages.</li>
-                    <li><strong>hongdo_ros_description</strong> stores URDF and mesh assets for the robot model.</li>
-                </ul>
-            </div>
-            <figure class="architecture-figure">
-                <img src="assets/system-architecture.png" alt="Hongdo robot software and hardware architecture diagram.">
-                <figcaption>System architecture from robot hardware to NUC-side ROS modules.</figcaption>
-            </figure>
-        </section>
-
-        <section class="section" aria-labelledby="ai-heading">
-            <h2 id="ai-heading" class="section-heading">Photo-To-Art Pipeline</h2>
-            <div class="pipeline-grid">
-                <figure>
-                    <img src="assets/ai-input-photo.png" alt="Original input photo used for AI conversion.">
-                    <figcaption>Input photo</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/ai-line-art-output.png" alt="Line-art conversion output from the AI pipeline.">
-                    <figcaption>Line-art output</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/ai-stylized-output.png" alt="Anime-style conversion output from the AI pipeline.">
-                    <figcaption>Stylized output</figcaption>
-                </figure>
-            </div>
-            <p class="paragraph">
-                The conversion flow references open-source image translation and sketch-generation projects, then wraps those outputs in a robot-facing event interaction. The visitor sees a continuous experience: capture, select, convert, and receive.
-            </p>
         </section>
 
     </main>
