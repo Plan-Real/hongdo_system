@@ -330,6 +330,18 @@ figcaption {
     line-height: 1.55;
 }
 
+.deployment-notes {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.deployment-notes li + li {
+    margin-top: 4px;
+}
+
 .deployment-media {
     display: grid;
     gap: 12px;
