@@ -264,6 +264,79 @@ figcaption {
     margin: 0;
 }
 
+.display-ui-section {
+    max-width: 1080px;
+}
+
+.display-ui-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.75fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.display-ui-media {
+    min-width: 0;
+    margin: 0;
+}
+
+.display-ui-media video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: #000000;
+}
+
+.interaction-flow {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.interaction-flow li {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding: 13px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.flow-index {
+    display: inline-flex;
+    width: 38px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--color-panel-strong);
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.interaction-flow h3 {
+    margin: 0;
+    color: #23262b;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.interaction-flow p {
+    margin: 4px 0 0;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
 .deployments-section,
 .behind-section {
     max-width: 1080px;
@@ -486,8 +559,13 @@ figcaption {
     .overview-grid,
     .deployment-grid,
     .pipeline-grid,
-    .split-section {
+    .split-section,
+    .display-ui-layout {
         grid-template-columns: 1fr;
+    }
+
+    .interaction-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .overview-item {
@@ -565,6 +643,10 @@ figcaption {
 
     .results-carousel img {
         height: 220px;
+    }
+
+    .interaction-flow {
+        grid-template-columns: 1fr;
     }
 
 }
