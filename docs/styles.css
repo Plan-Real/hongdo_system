@@ -264,10 +264,6 @@ figcaption {
     margin: 0;
 }
 
-.display-ui-section {
-    max-width: 1080px;
-}
-
 .display-ui-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.75fr);
@@ -283,6 +279,7 @@ figcaption {
 .display-ui-media video {
     display: block;
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: contain;
     border: 1px solid var(--color-border);
